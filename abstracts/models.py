@@ -72,3 +72,6 @@ class BaseBookProductModel(BaseSlugModel, BaseDateTimeModel):
 
     class Meta:
         abstract = True
+
+
+BaseSlugModel.objects.all().exists()
