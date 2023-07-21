@@ -32,7 +32,7 @@ class BaseDateTimeModel(models.Model):
 
 
 class BaseSlugModel(models.Model):
-    slug = models.SlugField(max_length=130, unique=True)
+    slug = models.SlugField(max_length=130, unique=True, blank=True, null=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:

@@ -7,11 +7,13 @@ from books.models import BookModel
 from products.models import ProductModel
 
 
-# Create your models here.
 class CategoryModel(MPTTModel, BaseSlugModel):
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100)  # unique=True
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
     image = models.ImageField(upload_to='images/category/')
+
+    class MPTTMeta:
+        order_insertion_by = ['name']
 
     def __str__(self):
         return self.name
@@ -55,7 +57,6 @@ class DiscountModel(models.Model):
         if self.is_daily:
             self.end_date = self.start_date + timedelta(days=1)
         super().save(*args, **kwargs)
-
 
     def __str__(self):
         return self.product.model

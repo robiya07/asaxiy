@@ -1,9 +1,6 @@
-{% extends 'layouts/base.html' %}
-{% load static %}
-<!-- MAIN  -->
+{% extends "layouts/base.html" %}
 
 {% block content %}
-
     <style>
         .col-xl-15 {
             width: 50%;
@@ -23,13 +20,13 @@
     </style>
     <!-- HERO  -->
     <section class="hero">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9 col-sm-12">
-                <div class="hero__big-slider--wrapper">
-                    <div class="hero__big-slider swiper-container">
-                        <div class="swiper-wrapper">
-                                                                                        <div class="swiper-slide">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-sm-12">
+                    <div class="hero__big-slider--wrapper">
+                        <div class="hero__big-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
                                     <div class="hero-big-ad">
                                         <a href="https://asaxiy.uz/u/64b0ebe208b9e">
                                             <picture>
@@ -47,7 +44,7 @@
                                     </div>
                                     <div class="swiper-lazy-preloader"></div>
                                 </div>
-                                                            <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="hero-big-ad">
                                         <a href="https://asaxiy.uz/product/barbara-oukli-raqamlar-uchun-yaralgan-idrok">
                                             <picture>
@@ -65,7 +62,7 @@
                                     </div>
                                     <div class="swiper-lazy-preloader"></div>
                                 </div>
-                                                            <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="hero-big-ad">
                                         <a href="http://asaxiy.uz/u/64a133d044c1f">
                                             <picture>
@@ -83,7 +80,7 @@
                                     </div>
                                     <div class="swiper-lazy-preloader"></div>
                                 </div>
-                                                            <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="hero-big-ad">
                                         <a href="https://asaxiy.uz/product/uolter-ayzekson-kod-buzar">
                                             <picture>
@@ -101,7 +98,7 @@
                                     </div>
                                     <div class="swiper-lazy-preloader"></div>
                                 </div>
-                                                            <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="hero-big-ad">
                                         <a href="https://asaxiy.uz/uz/product?key=x9a+">
                                             <picture>
@@ -119,7 +116,7 @@
                                     </div>
                                     <div class="swiper-lazy-preloader"></div>
                                 </div>
-                                                            <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="hero-big-ad">
                                         <a href="https://asaxiy.uz/u/64759208a2b29">
                                             <picture>
@@ -137,45 +134,49 @@
                                     </div>
                                     <div class="swiper-lazy-preloader"></div>
                                 </div>
-                                                    </div>
-                        <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12">
+                    <div class="day__product">
+                        <a href="https://asaxiy.uz/product/pogruzhnoi-blender-xiaomi-ocooker-cd-hb01"
+                           class="d-block position-relative">
+                            <picture>
+                                <source
+                                        srcset="https://assets.asaxiy.uz/uploads/toptoday/tablet/64b7ca7195127.jpg.webp 1x, https://assets.asaxiy.uz/uploads/toptoday/tablet/64b7ca7e447e8.jpg.webp 2x"
+                                        media="(max-width: 575px)">
+                                <source
+                                        srcset="https://assets.asaxiy.uz/uploads/toptoday/mobile/64b7ca5862013.jpg.webp 1x, https://assets.asaxiy.uz/uploads/toptoday/mobile/64b7ca62a920c.jpg.webp 2x"
+                                        media="(min-width: 992px)">
+                                <source
+                                        srcset="https://assets.asaxiy.uz/uploads/toptoday/desktop/64b7ca3d20bb6.jpg.webp 1x, https://assets.asaxiy.uz/uploads/toptoday/desktop/64b7ca4888685.jpg.webp 2x"
+                                        media="(min-width: 576px)">
+                                <img data-src="https://assets.asaxiy.uz/uploads/toptoday/desktop/64b7ca3d20bb6.jpg.webp"
+                                     alt="img title" class="lazyload"
+                                     loading="lazy">
+                            </picture>
+                            <div class="d-flex day__products-counter" id="dayProductCountdown"
+                                 data-today="1689879600000">
+                                <div id="hours"
+                                     class="day__products-counter--item text-center">469411
+                                </div>
+                                <div class="day__products-counter--separate">:</div>
+                                <div id="minutes"
+                                     class="day__products-counter--item text-center">0
+                                </div>
+                                <div class="day__products-counter--separate">:</div>
+                                <div id="seconds"
+                                     class="day__products-counter--item text-center">0
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-12">
-                <div class="day__product">
-                                        <a href="https://asaxiy.uz/product/pogruzhnoi-blender-xiaomi-ocooker-cd-hb01" class="d-block position-relative">
-                        <picture>
-                            <source
-                                    srcset="https://assets.asaxiy.uz/uploads/toptoday/tablet/64b7ca7195127.jpg.webp 1x, https://assets.asaxiy.uz/uploads/toptoday/tablet/64b7ca7e447e8.jpg.webp 2x"
-                                    media="(max-width: 575px)">
-                            <source
-                                    srcset="https://assets.asaxiy.uz/uploads/toptoday/mobile/64b7ca5862013.jpg.webp 1x, https://assets.asaxiy.uz/uploads/toptoday/mobile/64b7ca62a920c.jpg.webp 2x"
-                                    media="(min-width: 992px)">
-                            <source
-                                    srcset="https://assets.asaxiy.uz/uploads/toptoday/desktop/64b7ca3d20bb6.jpg.webp 1x, https://assets.asaxiy.uz/uploads/toptoday/desktop/64b7ca4888685.jpg.webp 2x"
-                                    media="(min-width: 576px)">
-                            <img data-src="https://assets.asaxiy.uz/uploads/toptoday/desktop/64b7ca3d20bb6.jpg.webp"
-                                 alt="img title" class="lazyload"
-                                 loading="lazy">
-                        </picture>
-                                                    <div class="d-flex day__products-counter" id="dayProductCountdown"
-                                 data-today="1689879600000">
-                                                                <div id="hours"
-                                     class="day__products-counter--item text-center">0</div>
-                                <div class="day__products-counter--separate">:</div>
-                                <div id="minutes"
-                                     class="day__products-counter--item text-center">0</div>
-                                <div class="day__products-counter--separate">:</div>
-                                <div id="seconds"
-                                     class="day__products-counter--item text-center">0</div>
-                            </div>
-                            </a>
-                                        </div>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
     <!-- HERO END  -->
 
 
@@ -210,7 +211,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,7878);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-sitronic-silver-24"
@@ -246,7 +247,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>2 отзывов</span>
@@ -354,7 +355,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,28621);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-sitronic-lider-24"
@@ -400,7 +401,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>1 отзывов</span>
@@ -508,7 +509,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,25416);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mikrovolnovaya-pech-bosch-bel634gs1"
@@ -574,7 +575,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -682,7 +683,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,25393);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mikrovolnovaya-pech-bosch-bfl524mw0"
@@ -733,7 +734,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -841,7 +842,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,4081);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/parogenerator-bosch-tds-4070-serie-4-easycomfort"
@@ -892,7 +893,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -1008,7 +1009,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,25415);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mikrovolnovaya-pech-bosch-bfl554ms0"
@@ -1054,7 +1055,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -1162,7 +1163,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,27050);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mikrovolnovaya-pech-panasonic-nn-gt261w-grill"
@@ -1198,7 +1199,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -1314,7 +1315,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,2267);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/izmelchitel-bosch-mmr-15a1" onclick='selectItemGtag()'>
@@ -1349,7 +1350,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -1465,7 +1466,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,25413);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mikrovolnovaya-pech-bosch-bfl524ms0"
@@ -1506,7 +1507,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -1614,7 +1615,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,25430);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mikrovolnovaya-pech-bosch-fem553mb0"
@@ -1665,7 +1666,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -1773,7 +1774,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,4074);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/izmelchitel-bosch-mmr-08r2" onclick='selectItemGtag()'>
@@ -1808,7 +1809,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -1924,7 +1925,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,25414);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mikrovolnovaya-pech-bosch-bel554ms0"
@@ -1975,7 +1976,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -2083,7 +2084,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,1342);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/izmelchitel-bosch-mmr-08a1" onclick='selectItemGtag()'>
@@ -2128,7 +2129,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -2244,7 +2245,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,2364);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/chajnik-elektricheskij-bosch-twk-8613"
@@ -2295,7 +2296,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -2411,7 +2412,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,2365);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/chajnik-elektricheskij-bosch-twk-8611"
@@ -2452,7 +2453,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -2574,7 +2575,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,45093);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/barbara-oukli-raqamlar-uchun-yaralgan-idrok"
@@ -2695,7 +2696,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>2 отзывов</span>
@@ -2809,7 +2810,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,41211);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/televizor-moonx-43ah700-smart-tv-pult-s-golosovym-upravleniem"
@@ -2855,7 +2856,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>4 отзывов</span>
@@ -2970,7 +2971,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,38775);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/charlz-uilan-yalangoch-iktisodiet"
@@ -3021,7 +3022,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>28 отзывов</span>
@@ -3135,7 +3136,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,16258);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-premier-neos-silver-09"
@@ -3171,7 +3172,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -3279,7 +3280,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,39242);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/besprovodnye-naushniki-airpods-pro-3-copy-nb0729-sst"
@@ -3335,7 +3336,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>2 отзывов</span>
@@ -3450,7 +3451,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,44659);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mikrovolnovaya-pech-premier-prm-20mwak1-b"
@@ -3496,7 +3497,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>0 отзывов</span>
@@ -3609,7 +3610,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,25883);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/teodor-draizer-sarmoyador" onclick='selectItemGtag()'>
@@ -3649,7 +3650,7 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                         <div class="product__item-info--comments">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12">
+                                            <svg width="12" height="12">
                                                 <use xlink:href="#comment-icon" x="0" y="0"></use>
                                             </svg>
                                             <span>61 отзывов</span>
@@ -3763,7 +3764,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,567);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/stiralnaya-mashina-hofmann-hw-610fw-belaya-6-kg"
@@ -3916,7 +3917,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,44867);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/urgaz-kovrik-komnatnyy-50" onclick='selectItemGtag()'>
@@ -4065,7 +4066,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,2547);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/umnye-vesy-xiaomi-mi-smart-scale"
@@ -4235,7 +4236,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,7878);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-sitronic-silver-24"
@@ -4378,7 +4379,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,7877);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-sitronic-silver-18"
@@ -4519,7 +4520,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,7876);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-sitronic-silver-12"
@@ -4661,7 +4662,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,28621);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-sitronic-lider-24"
@@ -4814,7 +4815,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,7863);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-citronic-lider-18"
@@ -4966,7 +4967,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,30110);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-samsung-ar12txhkasinua-inverter"
@@ -5140,7 +5141,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,31165);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-bosch-aso24xb30u-inverter"
@@ -5284,7 +5285,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,31164);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-bosch-aso18xb30u-inverter"
@@ -5428,7 +5429,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,31163);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-bosch-aso12xb30u-inverter"
@@ -5572,7 +5573,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,31162);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-bosch-aso09xb30u-inverter"
@@ -5716,7 +5717,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,31161);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-bosch-aoo24nw10u" onclick='selectItemGtag()'>
@@ -5859,7 +5860,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,31160);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-bosch-aoo018nw10u"
@@ -6003,7 +6004,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,31159);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-bosch-aoo12nw10u" onclick='selectItemGtag()'>
@@ -6146,7 +6147,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,31158);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kondicioner-bosch-aoo09nw10u" onclick='selectItemGtag()'>
@@ -6288,7 +6289,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,44862);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kolonnyy-kondicioner-immer-tundra-silver-24-inverter"
@@ -6437,7 +6438,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,26244);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/microlab-b70bt" onclick='selectItemGtag()'>
@@ -6595,7 +6596,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,39338);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/podstavka-dlya-noutbuka-borofone-portable-bh70"
@@ -6779,7 +6780,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,15077);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/klaviatura-gembird-kb-uml3-01"
@@ -6938,7 +6939,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46006);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/klaviatura-gembird-kb-uml3-01-belyy"
@@ -7092,7 +7093,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,4618);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/wi-fi-router-tp-link-tl-wr845n-adsl"
@@ -7241,7 +7242,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,29569);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/wi-fi-router-4g-cpe" onclick='selectItemGtag()'>
@@ -7392,7 +7393,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,11805);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/vneshnie-opticheskie-privody-dvd-rw"
@@ -7551,7 +7552,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,10754);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/wi-fi-router-tp-link-archer-c50-optika"
@@ -7706,7 +7707,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,37454);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/noutbuk-acer-aspire-a315-59g-50fh-core-i5-1235u-ddr4-8gb-hdd-1000gb-mx550-2gb-fullhd-156-silver"
@@ -7869,7 +7870,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,37503);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/monitor-lg-ultrawide-29wp500-b-2560x1080-75-gc-ips"
@@ -8031,7 +8032,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,33192);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/noutbuk-lenovo-ip3-15-iml05-intel-core-i3-10110u-ddr4-4gb-hdd-1tb-fhd-156-platinum-grey-3"
@@ -8184,7 +8185,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,11488);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mysh-besprovodnaya-xiaomi-mi-wireless-mouse-lite-chernaya"
@@ -8348,7 +8349,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,319);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mysh-defender-accura-mm-295-black-usb-besprovodnaya"
@@ -8497,7 +8498,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,37134);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/monitor-ziffler-22t215-full-hd"
@@ -8646,7 +8647,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,30906);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/klaviatura-a4tech-fstyler-fbx50c-gray"
@@ -8814,7 +8815,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46530);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/remark-erih-mariya-jizn-vzaymy-ili-u-neba-lyubimchikov-net-a6-myagkaya"
@@ -8964,7 +8965,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46529);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/mihail-bulgakov-master-i-margarita-a6-myagkaya"
@@ -9114,7 +9115,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46528);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/uzbekiston-respublikasi-konstituciyasi-kirilcha"
@@ -9264,7 +9265,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46527);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/uzbekiston-respublikasi-konstituciyasi-lotin"
@@ -9414,7 +9415,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46525);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/kuhonnyy-kombayn-mum5-bosch-mum59n26cb"
@@ -9596,7 +9597,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46524);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/klaviatura-akko-3068b-plus-blackcyan-cs-jelly-black-rgb"
@@ -9748,7 +9749,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46523);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/klaviatura-akko-3068b-plus-blackgold-cs-jelly-black-rgb"
@@ -9900,7 +9901,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46522);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/klaviatura-akko-3068b-plus-tokyo-r2-cs-jelly-purple-rgb"
@@ -10047,7 +10048,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46521);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/klaviatura-akko-3098b-ocean-star-cs-jelly-white-rgb"
@@ -10194,7 +10195,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46520);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/agata-kristi-smert-na-nile-2" onclick='selectItemGtag()'>
@@ -10343,7 +10344,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46519);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/li-bardugo-krah-i-voshod" onclick='selectItemGtag()'>
@@ -10492,7 +10493,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46518);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/klaviatura-akko-3098b-9009-cs-jelly-white-rgb"
@@ -10639,7 +10640,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46517);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/elektricheskiy-vodyanoy-nasos-dispenser-dlya-vody-nyt02"
@@ -10799,7 +10800,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46516);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/elektrosamokat-ninebot-ekickscooter-zing-c15e-siniy"
@@ -10946,7 +10947,7 @@
 
                             <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
                                     onclick="addToFavourites(this,46515);addToWishlistGtag();">
-                                <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                <img src="custom-assets/images/icons/heart.svg">
                             </button>
 
                             <a href="https://asaxiy.uz/product/klaviatura-akko-3098b-doraemon-rainbow-cs-jelly-pink-rgb"
@@ -11355,8 +11356,7 @@
         </div>
     </section>
     <!-- PARTNERS END  -->
-
 {% endblock %}
 
-<!-- MAIN END -->
+
 

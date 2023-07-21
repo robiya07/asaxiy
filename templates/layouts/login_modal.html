@@ -1,0 +1,118 @@
+<div class="modal login-modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content position-relative">
+            <button type="button" class="btn login__close close bg-white rounded-circle" data-dismiss="modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4L4 12" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M4 4L12 12" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="login__modal-left">
+                <div class="modal-body">
+                    <div class="login__modal-content">
+                        <h5 class="login-title text-center">Вход или создать личный кабинет</h5>
+                        <form id="login-form" action="https://asaxiy.uz/login" method="post">
+                            <input type="hidden" name="_csrf-asaxiy"
+                                   value="vWyJSsA8j08H5JU_ZnftkNfSpFJjhKuM865A-cGL98T2Kch5knfVIV2mwgsnFIzp4pP2ODfDk-fK7xqVsc6hrg==">
+                            <div class="login__withnumber">
+                                <div id="login-notification" class="notification closeable" style="display: none">
+                                    <p class="error-message"></p>
+                                    <a class="close" href="index.html#"></a>
+                                </div>
+
+                                <div class="form-group field-loginform-phone required">
+                                    <label class="control-label" for="loginform-phone">Телефон</label>
+                                    <input type="text" id="loginform-phone" class="form-control" name="LoginForm[phone]"
+                                           value="+998" onkeypress="Javascript:if(event.keyCode==13) sendSms()"
+                                           aria-required="true" data-plugin-inputmask="inputmask_a055eecd">
+
+                                    <div class="help-block"></div>
+                                </div>
+                                <button id="get-sms-btn" onclick="sendSms()" type="button"
+                                        class="btn default-btn btn-primary-custom login__modal-btn">Получить код
+                                    активации
+                                </button>
+
+                                <div id="submit-block" style="display: none;">
+                                    <div class="form-group field-loginform-verification required">
+                                        <label class="control-label" for="loginform-verification">СМС код</label>
+                                        <input type="text" id="loginform-verification" class="form-control"
+                                               name="LoginForm[verification]"
+                                               prompt="Введите 5-ти значный код активации" aria-required="true">
+
+                                        <div class="help-block"></div>
+                                    </div>
+                                    <button type="submit"
+                                            class="btn default-btn btn-primary-custom login__modal-btn">ВОЙТИ
+                                    </button>
+                                </div>
+                                <div class="sign__in mt-4">
+                                    <div class="sign__in-title">yoki</div>
+                                    <div id="w0">
+                                        <ul class="auth-clients">
+                                            <li><a class="google auth-link"
+                                                   href="https://asaxiy.uz/site/auth?authclient=google"
+                                                   title="Google"><span class="auth-icon google"></span></a></li>
+                                            <li><a class="facebook auth-link"
+                                                   href="https://asaxiy.uz/site/auth?authclient=facebook"
+                                                   title="Facebook"><span class="auth-icon facebook"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--                            <a href="#" class="withmail__btn trigger__btn" onclick="withMail()">Email bilan ro`yxatdan o`ting</a>-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="login__modal-right">
+                <div class="login__modal-right--list">
+                    <div class="login-modal__right__item d-flex align-items-center">
+                        <div
+                                class="icon rounded-circle bg-white flex-shrink-0 d-flex align-items-center justify-content-center">
+                            <img src="custom-assets/images/icons/market.svg" alt="market icon" width="35.2"
+                                 height="32">
+                        </div>
+                        <div class="info">
+                            <div class="info__title">Больше не нужно ходить на базар</div>
+                            <span>У нас выгодные цены и доставка до дома</span>
+                        </div>
+                    </div>
+                    <div class="login-modal__right__item d-flex align-items-center">
+                        <div
+                                class="icon rounded-circle bg-white flex-shrink-0 d-flex align-items-center justify-content-center">
+                            <img src="custom-assets/images/icons/fast-delivery.svg" alt="fast-delivery"
+                                 width="30.8" height="28">
+                        </div>
+                        <div class="info">
+                            <div class="info__title">Быстрая доставка</div>
+                            <span>Наш сервис удивит вас</span>
+                        </div>
+                    </div>
+                    <div class="login-modal__right__item d-flex align-items-center">
+                        <div
+                                class="icon rounded-circle bg-white flex-shrink-0 d-flex align-items-center justify-content-center">
+                            <img src="custom-assets/images/icons/return.svg" alt="return" width="32.4" height="24">
+                        </div>
+                        <div class="info">
+                            <div class="info__title">Удобства для вас</div>
+                            <span>Быстрое оформление и гарантия на возврат в случае неисправности</span>
+                        </div>
+                    </div>
+                    <div class="login-modal__right__item d-flex align-items-center">
+                        <div
+                                class="icon rounded-circle bg-white flex-shrink-0 d-flex align-items-center justify-content-center">
+                            <img src="custom-assets/images/icons/card.svg" alt="card" width="30" height="20">
+                        </div>
+                        <div class="info">
+                            <div class="info__title">Рассрочка</div>
+                            <span>Без предоплаты на 6 или 12 месяцев</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
