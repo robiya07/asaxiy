@@ -2,27 +2,6 @@ from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils.text import slugify
 
-
-class BaseProductBookRelationModel(models.Model):
-    product = models.ForeignKey('products.ProductModel', on_delete=models.CASCADE, null=True, blank=True)
-    book = models.ForeignKey('books.BookModel', on_delete=models.CASCADE, null=True, blank=True)
-
-    class Meta:
-        abstract = True
-
-    def __str__(self):
-        if self.product:
-            return self.product.name
-        return self.book.name
-
-
-class BaseSharedRelationModel(BaseProductBookRelationModel):
-    user = models.OneToOneField('users.UserModel', on_delete=models.CASCADE)
-
-    class Meta:
-        abstract = True
-
-
 class BaseDateTimeModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -58,6 +37,7 @@ class BaseSlugModel(models.Model):
 
 
 class BaseBookProductModel(BaseSlugModel, BaseDateTimeModel):
+
     model = models.CharField(max_length=50)
     name = models.CharField(max_length=100)
     main_image = models.ImageField(upload_to='images/product_detail')
@@ -66,9 +46,13 @@ class BaseBookProductModel(BaseSlugModel, BaseDateTimeModel):
     like = models.PositiveIntegerField(default=0)
     availability = models.BooleanField(default=True)
     installment = models.BooleanField(default=False)
+    price = models.IntegerField()
 
     def __str__(self):
         return self.model
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
 
     class Meta:
         abstract = True

@@ -44,11 +44,10 @@ INSTALLED_APPS = [
     'eav',
     'django_mptt_admin',
 
-    'books.apps.BooksConfig',
-    'details.apps.DetailsConfig',
-    'news.apps.NewsConfig',
-    'products.apps.ProductsConfig',
     'shared.apps.SharedConfig',
+    'details.apps.DetailsConfig',
+    'big_products.apps.ProductsConfig',
+    'news.apps.NewsConfig',
     'users.apps.UsersConfig',
 
     'location_field.apps.DefaultConfig',
@@ -127,7 +126,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 FAKER_LOCALE = None
 FAKER_PROVIDERS = None
 
@@ -143,6 +141,9 @@ MEDIA_URL = 'media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -155,7 +156,6 @@ CKEDITOR_CONFIGS = {
         # 'width': 300,
     },
 }
-
 
 LOCATION_FIELD = {
     'provider.google.api': '//maps.google.com/maps/api/js?sensor=false',
@@ -210,7 +210,7 @@ JAZZMIN_SETTINGS = {
     "topmenu_links": [
 
         # Url that gets reversed (Permissions can be added)
-        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
 
         # external url that opens in a new window (Permissions can be added)
         {"name": "View Site", "url": "http://127.0.0.1:8008/", "new_window": True},

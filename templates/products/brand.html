@@ -1,0 +1,2104 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+    <div class="container mt-32">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble"
+                itemscope
+                itemtype="https://schema.org/BreadcrumbList">
+                <li class="breadcrumb-item"
+                    itemprop="itemListElement"
+                    itemscope
+                    itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="https://asaxiy.uz/">
+                <span itemprop="name">
+                Главная                </span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </li>
+                <li class="breadcrumb-item"
+                    itemprop="itemListElement"
+                    itemscope
+                    itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href='https://asaxiy.uz/product/brands'>
+                        <span itemprop="name">Бренд</span>
+                        <meta itemprop="position" content="2">
+                    </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    <span> Товары от Hewlett-Packard  </span>
+                </li>
+            </ol>
+        </nav>
+
+    </div>
+    <div class="container">
+        <!--BRAND DESCRIPTION -->
+        <div class="brand__content mb-40 d-none">
+            <div class="container">
+                <div class="col">
+                    <div class="row brand__single d-flex align-items-center py-md-3 py-4 bg-white">
+                        <div class="brand__img col-lg-2 col-md-3 col-12 mb-md-0 mb-4 text-center">
+                            <!--                    img size 125x37 -->
+                            <img src="https://assets.asaxiy.uz/brand/webp//5e15c63e06b95.webp" alt="">
+                        </div>
+                        <div class="brand__description col-lg-10 col-md-9 col-12">
+                            <p>Hewlett-Packard</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutters category__top">
+            <div class="col-6 col-sm-4 col-md-2 col-lg-3 col-xl-2">
+                <a href="https://asaxiy.uz/brand/hewlett-packard?c_ids%5B0%5D=140">
+                    <div class="card">
+                        <div class="card__img">
+                            <!-- img size 250 x 250 -->
+                            <img src="https://assets.asaxiy.uz/category//6242d4810e4ad.png" alt="" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Принтеры и сканеры (16)</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 col-lg-3 col-xl-2">
+                <a href="https://asaxiy.uz/brand/hewlett-packard?c_ids%5B0%5D=138">
+                    <div class="card">
+                        <div class="card__img">
+                            <!-- img size 250 x 250 -->
+                            <img src="https://assets.asaxiy.uz/category//641186786cec6.png" alt="" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Мониторы (1)</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 col-lg-3 col-xl-2">
+                <a href="https://asaxiy.uz/brand/hewlett-packard?c_ids%5B0%5D=152">
+                    <div class="card">
+                        <div class="card__img">
+                            <!-- img size 250 x 250 -->
+                            <img src="https://assets.asaxiy.uz/category//641186aabd043.png" alt="" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Моноблоки (4)</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 col-lg-3 col-xl-2">
+                <a href="https://asaxiy.uz/brand/hewlett-packard?c_ids%5B0%5D=159">
+                    <div class="card">
+                        <div class="card__img">
+                            <!-- img size 250 x 250 -->
+                            <img src="https://assets.asaxiy.uz/category//634d21ff9a915.jpg" alt="" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Жесткие диски и SSD накопители для ноутбуков (1)</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 col-lg-3 col-xl-2">
+                <a href="https://asaxiy.uz/brand/hewlett-packard?c_ids%5B0%5D=476">
+                    <div class="card">
+                        <div class="card__img">
+                            <!-- img size 250 x 250 -->
+                            <img src="https://assets.asaxiy.uz/category//63da6404b9b1d.png" alt="" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ноутбуки (9)</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <section class="subcategories mb-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 d-lg-block d-none">
+                    <div class="subcategories__aside-wrapper">
+                        <form id="filter-form" action="brand.html" method="get">
+                            <aside class="sidebar_filter">
+                                <div class="sidebar_filter-header">
+                                    <div class="sidebar_filter-title">Категории</div>
+                                </div>
+                                <div class="sidebar_filter-body">
+                                    <ul>
+                                        <li>
+                                            <a href="brand.html#" class="link__checkbox">Принтеры и сканеры
+                                                (16)</a>
+                                        </li>
+                                        <li>
+                                            <a href="brand.html#" class="link__checkbox">Мониторы (1)</a>
+                                        </li>
+                                        <li>
+                                            <a href="brand.html#" class="link__checkbox">Моноблоки (4)</a>
+                                        </li>
+                                        <li>
+                                            <a href="brand.html#" class="link__checkbox">Жесткие диски и SSD
+                                                накопители для ноутбуков (1)</a>
+                                        </li>
+                                        <li>
+                                            <a href="brand.html#" class="link__checkbox">Ноутбуки (9)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+
+                            <!--                        OLD-->
+                            <div class="d-none">
+                                <div class="filter__list subcategories__aside collapse_aside">
+                                    <div class="filter__list-header">
+                                        <p>Категории</p>
+                                    </div>
+                                    <div class="filter-item">
+                                        <input id='brand-check-140' name="c_ids[]" value="140"
+                                               type="checkbox"
+                                               onchange='submitForm()'>
+                                        <label for="brand-check-140">Принтеры и сканеры (16)</label>
+                                    </div>
+                                    <div class="filter-item">
+                                        <input id='brand-check-138' name="c_ids[]" value="138"
+                                               type="checkbox"
+                                               onchange='submitForm()'>
+                                        <label for="brand-check-138">Мониторы (1)</label>
+                                    </div>
+                                    <div class="filter-item">
+                                        <input id='brand-check-152' name="c_ids[]" value="152"
+                                               type="checkbox"
+                                               onchange='submitForm()'>
+                                        <label for="brand-check-152">Моноблоки (4)</label>
+                                    </div>
+                                    <div class="filter-item">
+                                        <input id='brand-check-159' name="c_ids[]" value="159"
+                                               type="checkbox"
+                                               onchange='submitForm()'>
+                                        <label for="brand-check-159">Жесткие диски и SSD накопители для ноутбуков
+                                            (1)</label>
+                                    </div>
+                                    <div class="filter-item">
+                                        <input id='brand-check-476' name="c_ids[]" value="476"
+                                               type="checkbox"
+                                               onchange='submitForm()'>
+                                        <label for="brand-check-476">Ноутбуки (9)</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <input type="hidden" id='["form-sort"]' name="sort" value="default"></form>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-12">
+                    <div class="subcategories__header">
+                        <h1> Товары от Hewlett-Packard </h1>
+                        <select class="nc__select right" name="sortby" onchange="changeSortValue(this)">
+                            <option value="default" selected>Сортировка</option>
+                            <option value="date">Новинки</option>
+                            <option value="cheap">Сначала дешевле</option>
+                            <option value="expensive">Сначала дороже</option>
+                            <option value="rate-low">Рейтинг (начиная с низкого)</option>
+                            <option value="rate-high">Рейтинг (начиная с высокого)</option>
+                        </select></div>
+                    <div class="row custom-gutter mb-40">
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+                                <span class="pr_flash pr_discount">Скидка            </span>
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 33811);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,33811);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/printer-hp-laserjet-m141w-mfu-lazernyi-chb-a4"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//6315bcdc42189.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Принтер HP LaserJet M141w (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/96a3be3cf272e017046d1b2674a52bd32022090514100031405ojmfxMbgo5.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M141w (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/a2ef406e2c2351e0b9e80029c909242d20220905141001474160QTCscM3jA.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M141w (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/e45ee7ce7e88149af8dd32b27f9512ce2022090514100155794A7xzDu5jzm.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M141w (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/7d0665438e81d8eceb98c1e31fca80c12022090514100126262Auk6FNMV7x.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M141w (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Принтер HP LaserJet M141w (МФУ, лазерный, ч/б, A4)                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>0 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                    <span
+                                                                                            class="product__item-old--price">2 769 000 сум</span>
+                                                <span
+                                                        class="product__item-price">2 369 000 сум</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-12">
+                                            <a href="https://asaxiy.uz/order/one-click/printer-hp-laserjet-m141w-mfu-lazernyi-chb-a4"
+                                               onclick="show_one_click(33811);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33811\",\"item_name\":\"HP LaserJet M141w (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":397900,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2772700,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33811\",\"item_name\":\"HP LaserJet M141w (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":397900,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2772700,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33811\",\"item_name\":\"HP LaserJet M141w (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":397900,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2772700,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33811\",\"item_name\":\"HP LaserJet M141w (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":397900,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2772700,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33811\",\"item_name\":\"HP LaserJet M141w (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":397900,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2772700,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 34358);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,34358);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/noutbuk-hp-250-g8-core-i3-1115g4-ddr4-8-ssd-256-gb-156-fhd-ips-silver"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//6326e9e49777f.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Ноутбук HP 250 G8, Core i3- 1115G4, DDR4 8Gb, SSD 256 Gb, 15,6 FullHD Gray">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/efe6398127928f1b2e9ef3207fb826632023031016015950789N7UjAPU09R.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Ноутбук HP 250 G8, Core i3- 1115G4, DDR4 8Gb, SSD 256 Gb, 15,6 FullHD Gray">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Ноутбук HP 250 G8, Core i3- 1115G4, DDR4 8Gb, SSD 256 Gb, 15,6 FullHD Gray                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>7 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                <span
+                                                                                        class="product__item-price">4 319 000 сум</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-12">
+                                            <a href="https://asaxiy.uz/order/one-click/noutbuk-hp-250-g8-core-i3-1115g4-ddr4-8-ssd-256-gb-156-fhd-ips-silver"
+                                               onclick="show_one_click(34358);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_34358\",\"item_name\":\"HP 250 G8, Core i3- 1115G4, DDR4 8Gb, SSD 256 Gb, 15,6 FullHD Gray Noutbuki\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":1296400,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":5617600,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_34358\",\"item_name\":\"HP 250 G8, Core i3- 1115G4, DDR4 8Gb, SSD 256 Gb, 15,6 FullHD Gray Noutbuki\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":1296400,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":5617600,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_34358\",\"item_name\":\"HP 250 G8, Core i3- 1115G4, DDR4 8Gb, SSD 256 Gb, 15,6 FullHD Gray Noutbuki\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":1296400,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":5617600,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_34358\",\"item_name\":\"HP 250 G8, Core i3- 1115G4, DDR4 8Gb, SSD 256 Gb, 15,6 FullHD Gray Noutbuki\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":1296400,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":5617600,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_34358\",\"item_name\":\"HP 250 G8, Core i3- 1115G4, DDR4 8Gb, SSD 256 Gb, 15,6 FullHD Gray Noutbuki\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":1296400,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":5617600,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+                                <span class="pr_flash pr_discount">Скидка            </span>
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 33808);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,33808);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/printer-hp-laserjet-mfp-m141a-mfu-lazernyi-chb-a4"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//6315b757e06b6.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Принтер HP LaserJet MFP M141a (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/6512bd43d9caa6e02c990b0a82652dca2022090513462497028mPz1NcQ7BQ.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet MFP M141a (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Принтер HP LaserJet MFP M141a (МФУ, лазерный, ч/б, A4)                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>0 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                    <span
+                                                                                            class="product__item-old--price">2 219 000 сум</span>
+                                                <span
+                                                        class="product__item-price">2 119 000 сум</span>
+                                                <div class="installment__price">261 000 сум / 12 мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-5">
+                                            <a onclick="show_installment(33808); installmentButtonGtag()"
+                                               data-target="#installment"
+                                               data-toggle="modal" href="brand.html#"
+                                               class="btn default-btn btn-green-custom p-2 w-100"
+                                               style="font-size: 14px">Рассрочка</a>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <a href="https://asaxiy.uz/order/one-click/printer-hp-laserjet-mfp-m141a-mfu-lazernyi-chb-a4"
+                                               onclick="show_one_click(33808);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33808\",\"item_name\":\"HP LaserJet MFP M141a (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":99200,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2217300,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33808\",\"item_name\":\"HP LaserJet MFP M141a (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":99200,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2217300,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33808\",\"item_name\":\"HP LaserJet MFP M141a (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":99200,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2217300,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33808\",\"item_name\":\"HP LaserJet MFP M141a (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":99200,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2217300,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33808\",\"item_name\":\"HP LaserJet MFP M141a (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":99200,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2217300,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+                                <span class="pr_flash pr_discount">Скидка            </span>
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 33820);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,33820);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/printer-hp-laserjet-m111w-lazernyi-chb-a4"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//6315ce39c1c60.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Принтер HP LaserJet M111w (Лазерный, ч/б, A4)">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/96a3be3cf272e017046d1b2674a52bd32022090515241228409XTSURIFlLb.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M111w (Лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/a2ef406e2c2351e0b9e80029c909242d2022090515241145114Auje807I2S.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M111w (Лазерный, ч/б, A4)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Принтер HP LaserJet M111w (Лазерный, ч/б, A4)                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>0 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                    <span
+                                                                                            class="product__item-old--price">2 139 000 сум</span>
+                                                <span
+                                                        class="product__item-price">1 959 000 сум</span>
+                                                <div class="installment__price">242 000 сум / 12 мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-5">
+                                            <a onclick="show_installment(33820); installmentButtonGtag()"
+                                               data-target="#installment"
+                                               data-toggle="modal" href="brand.html#"
+                                               class="btn default-btn btn-green-custom p-2 w-100"
+                                               style="font-size: 14px">Рассрочка</a>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <a href="https://asaxiy.uz/order/one-click/printer-hp-laserjet-m111w-lazernyi-chb-a4"
+                                               onclick="show_one_click(33820);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33820\",\"item_name\":\"HP LaserJet M111w (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":178600,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2142700,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33820\",\"item_name\":\"HP LaserJet M111w (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":178600,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2142700,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33820\",\"item_name\":\"HP LaserJet M111w (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":178600,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2142700,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33820\",\"item_name\":\"HP LaserJet M111w (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":178600,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2142700,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33820\",\"item_name\":\"HP LaserJet M111w (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":178600,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2142700,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+                                <span class="pr_flash pr_discount">Скидка            </span>
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 33819);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,33819);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/printer-hp-laserjet-m111a-lazernyi-chb-a4"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//6315ccf4e0cdf.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Принтер HP LaserJet M111a (Лазерный, ч/б, A4)">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/c4ca4238a0b923820dcc509a6f75849b2022090515184092295lapVV8Mpt3.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M111a (Лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/c81e728d9d4c2f636f067f89cc14862c20220905151845792640niRVMMaYd.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M111a (Лазерный, ч/б, A4)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Принтер HP LaserJet M111a (Лазерный, ч/б, A4)                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>0 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                    <span
+                                                                                            class="product__item-old--price">2 019 000 сум</span>
+                                                <span
+                                                        class="product__item-price">1 789 000 сум</span>
+                                                <div class="installment__price">220 200 сум / 12 мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-5">
+                                            <a onclick="show_installment(33819); installmentButtonGtag()"
+                                               data-target="#installment"
+                                               data-toggle="modal" href="brand.html#"
+                                               class="btn default-btn btn-green-custom p-2 w-100"
+                                               style="font-size: 14px">Рассрочка</a>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <a href="https://asaxiy.uz/order/one-click/printer-hp-laserjet-m111a-lazernyi-chb-a4"
+                                               onclick="show_one_click(33819);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33819\",\"item_name\":\"HP LaserJet M111a (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":229000,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2016600,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33819\",\"item_name\":\"HP LaserJet M111a (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":229000,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2016600,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33819\",\"item_name\":\"HP LaserJet M111a (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":229000,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2016600,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33819\",\"item_name\":\"HP LaserJet M111a (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":229000,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2016600,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33819\",\"item_name\":\"HP LaserJet M111a (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":229000,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2016600,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+                                <span class="pr_flash pr_discount">Скидка            </span>
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 33821);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,33821);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/printer-hp-laserjet-pro-m404dn-lazernyi-chb-a4"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//6315cfbdd988f.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Принтер HP LaserJet Pro M404dn (Лазерный, ч/б, A4)">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/c4ca4238a0b923820dcc509a6f75849b2022090515303072402uYbkByA8dG.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet Pro M404dn (Лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/c81e728d9d4c2f636f067f89cc14862c2022090515303046597e6SW7KARBN.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet Pro M404dn (Лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/eccbc87e4b5ce2fe28308fd9f2a7baf320220905153030621204i2ZytE0gw.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet Pro M404dn (Лазерный, ч/б, A4)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Принтер HP LaserJet Pro M404dn (Лазерный, ч/б, A4)                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>0 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                    <span
+                                                                                            class="product__item-old--price">4 469 000 сум</span>
+                                                <span
+                                                        class="product__item-price">3 779 000 сум</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-12">
+                                            <a href="https://asaxiy.uz/order/one-click/printer-hp-laserjet-pro-m404dn-lazernyi-chb-a4"
+                                               onclick="show_one_click(33821);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33821\",\"item_name\":\"HP LaserJet Pro M404dn (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":693200,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4474300,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33821\",\"item_name\":\"HP LaserJet Pro M404dn (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":693200,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4474300,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33821\",\"item_name\":\"HP LaserJet Pro M404dn (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":693200,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4474300,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33821\",\"item_name\":\"HP LaserJet Pro M404dn (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":693200,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4474300,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33821\",\"item_name\":\"HP LaserJet Pro M404dn (lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":693200,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4474300,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+                                <span class="pr_flash pr_discount">Скидка            </span>
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 33814);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,33814);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/printer-hp-laserjet-m236sdw-mfu-lazernyi-chb-a4"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//6315c1c7ace86.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Принтер HP LaserJet M236sdw (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/96a3be3cf272e017046d1b2674a52bd3202209051430598764656neTY2qdI.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M236sdw (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/a2ef406e2c2351e0b9e80029c909242d2022090514305813326vc8aBbDemY.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M236sdw (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/e45ee7ce7e88149af8dd32b27f9512ce2022090514305887901g2pLbJe3ed.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M236sdw (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/7d0665438e81d8eceb98c1e31fca80c12022090514305848310gntKSaiEnp.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M236sdw (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Принтер HP LaserJet M236sdw (МФУ, лазерный, ч/б, A4)                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>0 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                    <span
+                                                                                            class="product__item-old--price">4 409 000 сум</span>
+                                                <span
+                                                        class="product__item-price">3 629 000 сум</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-12">
+                                            <a href="https://asaxiy.uz/order/one-click/printer-hp-laserjet-m236sdw-mfu-lazernyi-chb-a4"
+                                               onclick="show_one_click(33814);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33814\",\"item_name\":\"HP LaserJet M236sdw (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":786000,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4411300,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33814\",\"item_name\":\"HP LaserJet M236sdw (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":786000,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4411300,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33814\",\"item_name\":\"HP LaserJet M236sdw (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":786000,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4411300,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33814\",\"item_name\":\"HP LaserJet M236sdw (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":786000,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4411300,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33814\",\"item_name\":\"HP LaserJet M236sdw (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":786000,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4411300,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 33812);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,33812);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/printer-hp-laserjet-m236d-mfu-lazernyi-chb-a4"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//6315be67d5b60.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Принтер HP LaserJet M236d (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/c4ca4238a0b923820dcc509a6f75849b2022090514163392496yDG5pDmH6S.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M236d (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/c81e728d9d4c2f636f067f89cc14862c2022090514163372217QUdiAoLcFg.png.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M236d (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/eccbc87e4b5ce2fe28308fd9f2a7baf32022090514163410124QVNeIS7VSn.png.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet M236d (МФУ, лазерный, ч/б, A4)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Принтер HP LaserJet M236d (МФУ, лазерный, ч/б, A4)                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>0 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                <span
+                                                                                        class="product__item-price">3 629 000 сум</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-12">
+                                            <a href="https://asaxiy.uz/order/one-click/printer-hp-laserjet-m236d-mfu-lazernyi-chb-a4"
+                                               onclick="show_one_click(33812);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33812\",\"item_name\":\"HP LaserJet M236d (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":1087600,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4712900,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33812\",\"item_name\":\"HP LaserJet M236d (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":1087600,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4712900,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33812\",\"item_name\":\"HP LaserJet M236d (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":1087600,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4712900,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33812\",\"item_name\":\"HP LaserJet M236d (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":1087600,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4712900,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33812\",\"item_name\":\"HP LaserJet M236d (MFU, lazerli, oq\\/qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":1087600,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":4712900,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+                                <span class="pr_flash pr_discount">Скидка            </span>
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 3707);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,3707);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/printer-hp-laserjet-pro-m15w-lazernyj-ch-b-a4"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop/5e15bfaa85745.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Принтер HP LaserJet Pro M15w (Лазерный, ч/б, А4)">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/5e15bfaa9104a.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet Pro M15w (Лазерный, ч/б, А4)">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/5e15bfaa9c4d1.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Принтер HP LaserJet Pro M15w (Лазерный, ч/б, А4)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Принтер HP LaserJet Pro M15w (Лазерный, ч/б, А4)                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>0 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                    <span
+                                                                                            class="product__item-old--price">2 209 000 сум</span>
+                                                <span
+                                                        class="product__item-price">2 179 000 сум</span>
+                                                <div class="installment__price">268 900 сум / 12 мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-5">
+                                            <a onclick="show_installment(3707); installmentButtonGtag()"
+                                               data-target="#installment"
+                                               data-toggle="modal" href="brand.html#"
+                                               class="btn default-btn btn-green-custom p-2 w-100"
+                                               style="font-size: 14px">Рассрочка</a>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <a href="https://asaxiy.uz/order/one-click/printer-hp-laserjet-pro-m15w-lazernyj-ch-b-a4"
+                                               onclick="show_one_click(3707);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_3707\",\"item_name\":\"HP LaserJet Pro M15w (Lazerli, oq-qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":23300,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2205600,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_3707\",\"item_name\":\"HP LaserJet Pro M15w (Lazerli, oq-qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":23300,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2205600,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_3707\",\"item_name\":\"HP LaserJet Pro M15w (Lazerli, oq-qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":23300,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2205600,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_3707\",\"item_name\":\"HP LaserJet Pro M15w (Lazerli, oq-qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":23300,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2205600,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_3707\",\"item_name\":\"HP LaserJet Pro M15w (Lazerli, oq-qora, A4) printeri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":23300,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041f\\u0440\\u0438\\u043d\\u0442\\u0435\\u0440\\u044b \\u0438 \\u0441\\u043a\\u0430\\u043d\\u0435\\u0440\\u044b \",\"price\":2205600,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 33052);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,33052);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/monoblok-hp-envy-aio-34-c0154-intel-core-i7-11700-ddr4-16gb-ssd-1tb-34-wuhd-4k-nvidia-gtx-1650-4gb-no-dvd-silver"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//6303334678a60.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Моноблок HP ENVY AiO 34-c0154 / Intel Core i7-11700/ DDR4 16GB / SSD 1TB / 34&quot; WUHD 4K / NVIDIA GTX 1650 4GB / No DVD/ Silver">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/6512bd43d9caa6e02c990b0a82652dca2022082212421513783yDZgQvLCyq.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Моноблок HP ENVY AiO 34-c0154 / Intel Core i7-11700/ DDR4 16GB / SSD 1TB / 34&quot; WUHD 4K / NVIDIA GTX 1650 4GB / No DVD/ Silver">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/b6d767d2f8ed5d21a44b0e5886680cb92022082212421564229HjdPmOzyWq.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Моноблок HP ENVY AiO 34-c0154 / Intel Core i7-11700/ DDR4 16GB / SSD 1TB / 34&quot; WUHD 4K / NVIDIA GTX 1650 4GB / No DVD/ Silver">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Моноблок HP ENVY AiO 34-c0154 / Intel Core i7-11700/ DDR4 16GB / SSD 1TB / 34&quot; WUHD 4K / NVIDIA GTX 1650 4GB / No DVD/ Silver                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>0 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                <span
+                                                                                        class="product__item-price">39 679 000 сум</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-12">
+                                            <a href="https://asaxiy.uz/order/one-click/monoblok-hp-envy-aio-34-c0154-intel-core-i7-11700-ddr4-16gb-ssd-1tb-34-wuhd-4k-nvidia-gtx-1650-4gb-no-dvd-silver"
+                                               onclick="show_one_click(33052);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33052\",\"item_name\":\"HP ENVY AiO 34-c0154 \\/ Intel Core i7-11700\\/ DDR4 16GB \\/ SSD 1TB \\/ 34\\\" WUHD 4K \\/ NVIDIA GTX 1650 4GB \\/ No DVD\\/ kumushrang monoblok kompyuteri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":11903400,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041c\\u043e\\u043d\\u043e\\u0431\\u043b\\u043e\\u043a\\u0438\",\"price\":51581400,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33052\",\"item_name\":\"HP ENVY AiO 34-c0154 \\/ Intel Core i7-11700\\/ DDR4 16GB \\/ SSD 1TB \\/ 34\\\" WUHD 4K \\/ NVIDIA GTX 1650 4GB \\/ No DVD\\/ kumushrang monoblok kompyuteri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":11903400,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041c\\u043e\\u043d\\u043e\\u0431\\u043b\\u043e\\u043a\\u0438\",\"price\":51581400,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33052\",\"item_name\":\"HP ENVY AiO 34-c0154 \\/ Intel Core i7-11700\\/ DDR4 16GB \\/ SSD 1TB \\/ 34\\\" WUHD 4K \\/ NVIDIA GTX 1650 4GB \\/ No DVD\\/ kumushrang monoblok kompyuteri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":11903400,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041c\\u043e\\u043d\\u043e\\u0431\\u043b\\u043e\\u043a\\u0438\",\"price\":51581400,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33052\",\"item_name\":\"HP ENVY AiO 34-c0154 \\/ Intel Core i7-11700\\/ DDR4 16GB \\/ SSD 1TB \\/ 34\\\" WUHD 4K \\/ NVIDIA GTX 1650 4GB \\/ No DVD\\/ kumushrang monoblok kompyuteri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":11903400,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041c\\u043e\\u043d\\u043e\\u0431\\u043b\\u043e\\u043a\\u0438\",\"price\":51581400,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_33052\",\"item_name\":\"HP ENVY AiO 34-c0154 \\/ Intel Core i7-11700\\/ DDR4 16GB \\/ SSD 1TB \\/ 34\\\" WUHD 4K \\/ NVIDIA GTX 1650 4GB \\/ No DVD\\/ kumushrang monoblok kompyuteri\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":11903400,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041c\\u043e\\u043d\\u043e\\u0431\\u043b\\u043e\\u043a\\u0438\",\"price\":51581400,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+                                <span class="pr_flash pr_discount">Скидка            </span>
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 41514);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,41514);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/noutbuk-hp-15s-eq2012ne-ryzen-5-5500u-ddr4-8gb-ssd-512gb-156-fullhd-black"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//640b249024e30.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Ноутбук HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6&quot; FullHD, Black">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/e244e04e73bc14f97ece2a354827da972023031017364834359i2ZMqCBlSS.png.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Ноутбук HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6&quot; FullHD, Black">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/c09fa2bd863753ba318236837a75ae7b20230310173648819504CJCeUQUF7.png.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Ноутбук HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6&quot; FullHD, Black">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/d24c2e1d03c6531db5916d46f81e77082023031017364957344lSS00V9nRn.png.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Ноутбук HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6&quot; FullHD, Black">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/1e184d0ef3fcbcb1dae7d158d071704c2023031017364918075ppcWbKQZ1Y.png.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Ноутбук HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6&quot; FullHD, Black">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Ноутбук HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6&quot; FullHD, Black                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>4 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                    <span
+                                                                                            class="product__item-old--price">5 359 000 сум</span>
+                                                <span
+                                                        class="product__item-price">5 329 000 сум</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-12">
+                                            <a href="https://asaxiy.uz/order/one-click/noutbuk-hp-15s-eq2012ne-ryzen-5-5500u-ddr4-8gb-ssd-512gb-156-fullhd-black"
+                                               onclick="show_one_click(41514);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_41514\",\"item_name\":\"HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6\\\" FullHD, Black Noutbuki\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":30100,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":5356500,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_41514\",\"item_name\":\"HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6\\\" FullHD, Black Noutbuki\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":30100,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":5356500,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_41514\",\"item_name\":\"HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6\\\" FullHD, Black Noutbuki\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":30100,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":5356500,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_41514\",\"item_name\":\"HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6\\\" FullHD, Black Noutbuki\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":30100,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":5356500,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_41514\",\"item_name\":\"HP 15S-EQ2012NE, Ryzen 5-5500U, DDR4 8Gb, SSD 512Gb, 15.6\\\" FullHD, Black Noutbuki\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":30100,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":5356500,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                        <div class="col-6 col-xl-3 col-md-4">
+                            <div
+                                    class="product__item d-flex flex-column justify-content-between ">
+                                <span class="pr_flash pr_discount">Скидка            </span>
+
+                                <button type="button" class="product__item-cart border-0"
+                                        onclick="addToCartAnim(this, 41503);addToCartGtag();">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                                d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                fill="white"/>
+                                        <path
+                                                d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                fill="white"/>
+                                    </svg>
+                                </button>
+
+                                <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                        onclick="addToFavourites(this,41503);addToWishlistGtag();">
+                                    <img src="../custom-assets/images/icons/heart.svg">
+                                </button>
+
+                                <a href="https://asaxiy.uz/product/hp-255-g9-ryzen-7-5825u-ddr4-8gb-hdd-1000gb-156-fullhd-otpechatok-palca-gray"
+                                   onclick='selectItemGtag()'>
+                                    <div class="product__item-img swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="img-fluid lazyload"
+                                                     data-src="https://assets.asaxiy.uz/product/main_image/desktop//640b0b345212b.jpg.webp"
+                                                     loading="lazy"
+                                                     alt="Ноутбук HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6&quot; FullHD gray">
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/52f87612d2720e8aebabb5c6c205e85620230310154930165622mLOfUwMyK.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Ноутбук HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6&quot; FullHD gray">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/e0a6a2fd2cb49e92f424aacaec3abdd52023031015493037312qTAckjXhwM.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Ноутбук HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6&quot; FullHD gray">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/088c96281cc07afd4b69f3a571d6ed022023031015493075780LEqBtNpqrF.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Ноутбук HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6&quot; FullHD gray">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img data-src="https://assets.asaxiy.uz/product/items/desktop/3d6820f3226d15a2814b590fb1cb1aa82023031015493038409VcSa8PyFCF.jpg.webp"
+                                                     class="img-fluid lazyload" loading="lazy"
+                                                     alt="Ноутбук HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6&quot; FullHD gray">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__item-info">
+                                        <p class="title__link">
+                <span class="product__item__info-title">
+                    Ноутбук HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6&quot; FullHD gray                </span>
+                                        </p>
+                                        <div class="product__item-info--rating">
+                                            <div class="product__item-rating--stars">
+
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <div class="product__item-info--comments">
+                                                <svg width="12" height="12">
+                                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                </svg>
+                                                <span>2 отзывов</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="product__item-info--prices">
+                                            <div class="produrct__item-prices--wrapper">
+                                                                                    <span
+                                                                                            class="product__item-old--price">6 639 000 сум</span>
+                                                <span
+                                                        class="product__item-price">5 929 000 сум</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mt-3">
+                                    <div class="row s__custom-gutter">
+                                        <div class="col-sm-12">
+                                            <a href="https://asaxiy.uz/order/one-click/hp-255-g9-ryzen-7-5825u-ddr4-8gb-hdd-1000gb-156-fullhd-otpechatok-palca-gray"
+                                               onclick="show_one_click(41503);oneClickOrderGtag()"
+                                               class="btn default-btn btn-primary-custom p-2 w-100"
+                                               style="font-size: 13px">
+                                                Купить в 1 клик </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function selectItemGtag() {
+                                let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_41503\",\"item_name\":\"HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6\\\" FullHD, gray Noutbuk\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":709300,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":6638800,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "select_item", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function installmentButtonGtag() {
+                                let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_41503\",\"item_name\":\"HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6\\\" FullHD, gray Noutbuk\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":709300,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":6638800,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "installment", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function oneClickOrderGtag() {
+                                let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_41503\",\"item_name\":\"HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6\\\" FullHD, gray Noutbuk\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":709300,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":6638800,\"quantity\":1}]}}");
+                                window.dataLayer.push(data);
+                                gtag("event", "one_click_order", {
+                                    currency: "UZS",
+                                    value: data.ecommerce.items[0].price,
+                                    items: data.ecommerce.items
+                                });
+                            }
+
+                            function addToCartGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_41503\",\"item_name\":\"HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6\\\" FullHD, gray Noutbuk\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":709300,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":6638800,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_cart", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                            function addToWishlistGtag() {
+                                let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_41503\",\"item_name\":\"HP 255 G9, Ryzen 7-5825U, DDR4 8Gb, HDD 1000Gb, 15.6\\\" FullHD, gray Noutbuk\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":709300,\"item_brand\":\"Hewlett-Packard\",\"item_category\":\"\\u041d\\u043e\\u0443\\u0442\\u0431\\u0443\\u043a\\u0438\",\"price\":6638800,\"quantity\":1}]}}");
+                                window.dataLayer.push(product_item);
+                                gtag("event", "add_to_wishlist", {
+                                    currency: "UZS",
+                                    value: product_item.ecommerce.items[0].price,
+                                    items: product_item.ecommerce.items
+                                });
+                            }
+
+                        </script>
+
+
+                    </div>
+                    <nav class="pagination__nav">
+                        <ul class="pagination">
+                            <li class="page-item prev disabled"><a class="page-link">&laquo;</a></li>
+                            <li class="page-item active"><a class="page-link" href="brand.html" data-page="0">1</a>
+                            </li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="https://asaxiy.uz/brand/hewlett-packard/page=2"
+                                                     data-page="1">2</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="https://asaxiy.uz/brand/hewlett-packard/page=3"
+                                                     data-page="2">3</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="https://asaxiy.uz/brand/hewlett-packard/page=2"
+                                                     data-page="1">&raquo;</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function submitForm() {
+            $("#filter-form").submit();
+        }
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            $('.brand_id').click(function () {
+                console.log($(this).is(':checked'));
+            });
+        });
+
+        function changeSortValue(select) {
+            $('input[name="sort"]').val(select.value);
+            submitForm();
+        }
+
+
+    </script>
+
+{% endblock %}

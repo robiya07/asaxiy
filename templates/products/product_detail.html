@@ -1,0 +1,666 @@
+{% extends "layouts/base.html" %}
+{% load static product %}
+
+{% block content %}
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61499039-1"></script>-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4GYM0118P"></script>
+    <section class="more__about mt-32 mb-40" itemscope itemtype="https://schema.org/Product">
+        <div class="container">
+
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble"
+                    itemscope
+                    itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item"
+                        itemprop="itemListElement"
+                        itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://asaxiy.uz/">
+                <span itemprop="name">
+                Главная                </span>
+                            <meta itemprop="position" content="1">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item"
+                        itemprop="itemListElement"
+                        itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href='https://asaxiy.uz/product'>
+                            <span itemprop="name">Товары</span>
+                            <meta itemprop="position" content="2">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item"
+                        itemprop="itemListElement"
+                        itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href='https://asaxiy.uz/product/knigi'>
+                            <span itemprop="name">Книги</span>
+                            <meta itemprop="position" content="3">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item"
+                        itemprop="itemListElement"
+                        itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href='https://asaxiy.uz/product/knigi/asaxiybooks-kitoblari'>
+                            <span itemprop="name">Asaxiy Books китоблари</span>
+                            <meta itemprop="position" content="4">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span>Чарльз Уилан: Яланғоч иқтисодиёт. Мураккаб соҳанинг содда қиёфаси</span>
+                    </li>
+                </ol>
+            </nav>
+
+
+            <div class="row mb-40">
+                <!-- CAROUSEL NAV  -->
+                <div class="col-xl-5 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-lg-2 d-none d-lg-block">
+                            <div class="slider slider-more-about-nav swiper-container">
+                                <div class="swiper-wrapper">
+                                    {% for image in product.imagemodel_set.all %}
+                                        <div class="swiper-slide">
+                                            <div class="item__img">
+                                                <img class="img-fluid"
+                                                     itemprop="image"
+                                                     title="{{ product.name }}"
+                                                     src="{{ image.image.url }}"
+                                                     alt="{{ product.model }}">
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                        <!-- CAROUSEL NAV END  -->
+
+                        <!-- CAROUSEL FOR  -->
+                        <div class="col-lg-10 col-sm-12">
+                            <div class="slider-more-about-for-wrapper position-relative">
+                                <button class="btn view__favourite rounded-circle"
+                                        onclick="addToFavourites(this,38775);addToWishlistGtag();">
+                                    <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                </button>
+                                <div class="slider slider-more-about-for swiper-container">
+                                    <div class="swiper-wrapper">
+                                        {% for image in product.imagemodel_set.all %}
+                                            <a class="swiper-slide item__main-img"
+                                               href="{{ image.image.url }}">
+                                                <img class="img-fluid"
+                                                     title="{{ product.name }}"
+                                                     src="{{ image.image.url }}"
+                                                     alt="{{ product.model }}">
+                                            </a>
+                                        {% endfor %}
+
+
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CAROUSEL FOR END  -->
+                    </div>
+                </div>
+                <!-- PRODUCT INFO  -->
+                <div class="col-xl-5 col-md-6 col-sm-12">
+                    <div class="more__about-content">
+                        <h1 class="product-title" itemprop="name">{{ product.name }}</h1>
+
+                        <div class="rating-box"
+                             itemprop="aggregateRating"
+                             itemscope
+                             itemtype="https://schema.org/AggregateRating">
+                            <span class="d-none" itemprop="ratingValue">5</span>
+                            <span class="d-none" itemprop="reviewCount">{{ product.reviewmodel_set.count }}</span>
+                            <div class="more__about-stars">
+
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="more__about-comment pointer__e-none" data-href="feedback__wrapper"
+                                 onclick="toScroll(this)">
+                                <svg width="12" height="12">
+                                    <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                </svg>
+                                <span>{{ product.reviewmodel_set.count }} отзывов</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <div class="price-box">
+                                <link itemprop="url" href="{% url "big_products:product_detail" product.slug %}">
+                                {% if product.discountmodel %}
+                                    <span class="price-box_old-price">{{ product.price|format_price }} сум</span>
+                                    <span itemprop="price" content="209000"
+                                          class="price-box_new-price">{{ product.discountmodel.price }} сум</span>
+                                {% else %}
+                                    <span itemprop="price" content="209000"
+                                          class="price-box_new-price">{{ product.price|format_price }} сум</span>
+                                {% endif %}
+                                <span class="d-none" itemprop="priceCurrency" content="UZS">сум</span>
+                                {% if product.installment %}
+                                    <div class="installment__price">23 300 сум / 12 мес</div>
+                                {% endif %}
+                            </div>
+                            <link itemprop="availability" href="https://schema.org/InStock"/>
+                        </div>
+
+
+                        <!-- Modifications -->
+                        <div class="mb-3 d-flex flex-wrap">
+                            {% if product.prod %}
+                                <div class="text__content d-flex align-items-center mr-3" itemprop="brand"
+                                     itemtype="https://schema.org/Brand" itemscope="">
+                                    <span class="text__content-title">Бренд:</span>
+                                    <a href="{% url "shared:brand" product.prod.brand.slug %}" itemprop="name"
+                                       content="Acer">
+                                        <span class="text__content-name">{{ product.prod.brand.name }}</span>
+                                    </a>
+                                </div>
+                            {% endif %}
+                            <div class="text__content d-flex align-items-center">
+                                <span class="text__content-title">Модель:</span>
+                                <span class="text__content-name">{{ product.model }}</span>
+                            </div>
+                        </div>
+
+                        <div class="text__content d-flex align-items-center mb-3">
+                            <span class="text__content-title">Наличии:</span>
+                            {% if product.availability %}
+                                <span class="text__content-name"
+                                      style='color:#34D374; font-size: 18px; font-weight: 600;'>● Есть в наличии</span>
+                            {% else %}
+                                <span class="text__content-name"
+                                      style='color:#ff0000; font-size: 18px; font-weight: 600;'>● Нет в наличии</span>
+                            {% endif %}
+                        </div>
+                        <div class="mb-4">
+
+                            <div class="list_title mb-3">Ovoz bering:</div>
+                            <ul class="readlist">
+                                <li class="readlist__item">
+                                    <a href="#!" data-url="/ajax/set-user-action-on-product?status=7&amp;book_id=41470"
+                                       class="book-reader-action-button readlist__link d-flex align-items-center justify-content-between ">
+                                        <div class="d-flex">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                 fill="currentColor" class="bi bi-hand-thumbs-up-fill"
+                                                 viewBox="0 0 16 16">
+                                                <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+                                            </svg>
+                                            <span class="readlist__link-name">&nbsp;&nbsp;Я рекомендую</span>
+                                        </div>
+                                        <span class="ml-2 count">0</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d-flex align-items-sm-center flex-column flex-sm-row mb-4">
+                            <p class="share__text mb-2 mb-sm-0 mr-0 mr-sm-2">Поделиться:</p>
+                            <ul class="social__list">
+                                <li><a onclick="shareProduct(38775)" id="sharelink-facebook" target="_blank"
+                                       class="sc_facebook"
+                                       href="https://www.facebook.com/dialog/share?app_id=296649824842615&u=https%3A%2F%2Fasaxiy.uz%2Fproduct%2Fcharlz-uilan-yalangoch-iktisodiet&display=page&href=https%3A%2F%2Fasaxiy.uz%2Fproduct%2Fcharlz-uilan-yalangoch-iktisodiet"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                                <li><a onclick="shareProduct(38775)" id="sharelink-telegram" target="_blank"
+                                       class="sc_telegram"
+                                       href="https://t.me/share/url?url=https%3A%2F%2Fasaxiy.uz%2Fproduct%2Fcharlz-uilan-yalangoch-iktisodiet&text=%D0%A7%D0%B0%D1%80%D0%BB%D1%8C%D0%B7+%D0%A3%D0%B8%D0%BB%D0%B0%D0%BD%3A+%D0%AF%D0%BB%D0%B0%D0%BD%D2%93%D0%BE%D1%87+%D0%B8%D2%9B%D1%82%D0%B8%D1%81%D0%BE%D0%B4%D0%B8%D1%91%D1%82.+%D0%9C%D1%83%D1%80%D0%B0%D0%BA%D0%BA%D0%B0%D0%B1+%D1%81%D0%BE%D2%B3%D0%B0%D0%BD%D0%B8%D0%BD%D0%B3+%D1%81%D0%BE%D0%B4%D0%B4%D0%B0+%D2%9B%D0%B8%D1%91%D1%84%D0%B0%D1%81%D0%B8"><i
+                                        class="fab fa-telegram-plane"></i></a></li>
+                                <li><a onclick="shareProduct(38775)" id="sharelink-twitter" target="_blank"
+                                       class="sc_twitter"
+                                       href="https://twitter.com/intent/tweet?text=%D0%A7%D0%B0%D1%80%D0%BB%D1%8C%D0%B7+%D0%A3%D0%B8%D0%BB%D0%B0%D0%BD%3A+%D0%AF%D0%BB%D0%B0%D0%BD%D2%93%D0%BE%D1%87+%D0%B8%D2%9B%D1%82%D0%B8%D1%81%D0%BE%D0%B4%D0%B8%D1%91%D1%82.+%D0%9C%D1%83%D1%80%D0%B0%D0%BA%D0%BA%D0%B0%D0%B1+%D1%81%D0%BE%D2%B3%D0%B0%D0%BD%D0%B8%D0%BD%D0%B3+%D1%81%D0%BE%D0%B4%D0%B4%D0%B0+%D2%9B%D0%B8%D1%91%D1%84%D0%B0%D1%81%D0%B8&url=https%3A%2F%2Fasaxiy.uz%2Fproduct%2Fcharlz-uilan-yalangoch-iktisodiet&hashtags=asaxiyuz"><i
+                                        class="fab fa-twitter"></i></a></li>
+                                <li><a onclick="shareProduct(38775)" id="sharelink-whatsapp" target="_blank"
+                                       class="sc_whatsapp"
+                                       href="https://api.whatsapp.com/send?text=Чарльз Уилан: Яланғоч иқтисодиёт. Мураккаб соҳанинг содда қиёфаси"
+                                       %20"https%3A%2F%2Fasaxiy.uz%2Fproduct%2Fcharlz-uilan-yalangoch-iktisodiet "><i
+                                        class="fab fa-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                        {% if product.availability %}
+                            <div class="button-gr">
+                                {% if product.installment %}
+                                    <a onclick="show_installment(38775)" data-target="#installment"
+                                       data-toggle="modal" href="product_detail.html#"
+                                       class="btn default-btn btn-primary-custom">Приобрести в рассрочку</a>
+                                {% endif %}
+
+                                <a id="add_to_cart"
+                                   onclick="addToCartInView(this, 38775);addToCartGtag()"
+                                   class="btn default-btn btn-orange-custom">
+                                    <img
+                                            src="{% static "custom-assets/images/cart-white.svg" %}"
+                                            alt="image description">
+                                    Добавить в корзину </a>
+                                <a href="https://asaxiy.uz/order/one-click/charlz-uilan-yalangoch-iktisodiet"
+                                   onclick="show_one_click(38775)"
+                                   class="btn outline__default-btn orange-outline-custom">
+                                    Купить в 1 клик </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- PRODUCT INFO END  -->
+
+                <!-- RECOMMENDEDS CAROUSEL  -->
+                <div class="col-xl-2 d-none d-xl-block">
+                    <div class="recommends swiper-container mb-4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="recommended">
+                                    <h4>Рекомендуем</h4>
+                                    <a href="https://asaxiy.uz/product/uolter-ajzekson-stiv-dzhobs">
+                                        <div class="main__img">
+                                            <img
+                                                    src="https://assets.asaxiy.uz/product/main_image/desktop//5f4e05aa6ebe8.png.webp"
+                                                    alt="image description">
+                                        </div>
+                                        <h5>Уолтер Айзексон: Стив Жобс</h5>
+                                    </a>
+                                    <div class="reco__price-wrapper">
+                                        <!--<a href="#" class="bookmark"><i class="fas fa-bookmark"></i></a>-->
+                                        <div class="reco__price">
+                                                                                                    <span
+                                                                                                            class="reco__price-new">79 000 сум</span>
+                                        </div>
+                                        <a onclick="addToCart(2970)"
+                                           class="reco_cart rounded-circle">
+                                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 25.67 25.24" id="first-cart">
+                                                <path
+                                                        d="M24.67 9.24h-3.86a1.34 1.34 0 00-.28-.76l-6.67-8a1.33 1.33 0 00-2 0l-6.67 8a1.34 1.34 0 00-.28.76H1a1 1 0 00-.92 1.38L5.4 23.39a3 3 0 002.77 1.85h9.33a3 3 0 002.77-1.85l5.32-12.77a1 1 0 00-.92-1.38zM12.83 19.9a2.67 2.67 0 112.67-2.66 2.66 2.66 0 01-2.67 2.66zM8 9.24l4.85-5.82 4.85 5.82z"
+                                                        fill="#c2c6d1"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="recommended">
+                                    <h4>Рекомендуем</h4>
+                                    <a href="https://asaxiy.uz/product/toni-shej-baht-etkazish-milliard-dollarlik-internet-dukon-tarihi-buyurtma-asosida">
+                                        <div class="main__img">
+                                            <img
+                                                    src="https://assets.asaxiy.uz/product/main_image/desktop//622b2768cad9e.jpg.webp"
+                                                    alt="image description">
+                                        </div>
+                                        <h5>Тони Шей: Бахт етказиш. Миллиард долларлик интернет дўкон тарихи</h5>
+                                    </a>
+                                    <div class="reco__price-wrapper">
+                                        <!--<a href="#" class="bookmark"><i class="fas fa-bookmark"></i></a>-->
+                                        <div class="reco__price">
+                                                                                                    <span
+                                                                                                            class="reco__price-new">79 000 сум</span>
+                                        </div>
+                                        <a onclick="addToCart(11668)"
+                                           class="reco_cart rounded-circle">
+                                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 25.67 25.24" id="first-cart">
+                                                <path
+                                                        d="M24.67 9.24h-3.86a1.34 1.34 0 00-.28-.76l-6.67-8a1.33 1.33 0 00-2 0l-6.67 8a1.34 1.34 0 00-.28.76H1a1 1 0 00-.92 1.38L5.4 23.39a3 3 0 002.77 1.85h9.33a3 3 0 002.77-1.85l5.32-12.77a1 1 0 00-.92-1.38zM12.83 19.9a2.67 2.67 0 112.67-2.66 2.66 2.66 0 01-2.67 2.66zM8 9.24l4.85-5.82 4.85 5.82z"
+                                                        fill="#c2c6d1"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="recommended">
+                                    <h4>Рекомендуем</h4>
+                                    <a href="https://asaxiy.uz/product/enri-ford-mening-hayotim">
+                                        <div class="main__img">
+                                            <img
+                                                    src="https://assets.asaxiy.uz/product/main_image/desktop//5f8ec73515f1d.png.webp"
+                                                    alt="image description">
+                                        </div>
+                                        <h5>Ҳенри Форд: Менинг ҳаётим</h5>
+                                    </a>
+                                    <div class="reco__price-wrapper">
+                                        <!--<a href="#" class="bookmark"><i class="fas fa-bookmark"></i></a>-->
+                                        <div class="reco__price">
+                                                                                                    <span
+                                                                                                            class="reco__price-new">59 000 сум</span>
+                                        </div>
+                                        <a onclick="addToCart(13325)"
+                                           class="reco_cart rounded-circle">
+                                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 25.67 25.24" id="first-cart">
+                                                <path
+                                                        d="M24.67 9.24h-3.86a1.34 1.34 0 00-.28-.76l-6.67-8a1.33 1.33 0 00-2 0l-6.67 8a1.34 1.34 0 00-.28.76H1a1 1 0 00-.92 1.38L5.4 23.39a3 3 0 002.77 1.85h9.33a3 3 0 002.77-1.85l5.32-12.77a1 1 0 00-.92-1.38zM12.83 19.9a2.67 2.67 0 112.67-2.66 2.66 2.66 0 01-2.67 2.66zM8 9.24l4.85-5.82 4.85 5.82z"
+                                                        fill="#c2c6d1"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="recommended">
+                                    <h4>Рекомендуем</h4>
+                                    <a href="https://asaxiy.uz/product/jona-berger-yuqumlilik-mahsulot-va-goyalar-qandaj-ommalashadi-oldindan-buyurtma">
+                                        <div class="main__img">
+                                            <img
+                                                    src="https://assets.asaxiy.uz/product/main_image/desktop//624597b53e5c8.jpg.webp"
+                                                    alt="image description">
+                                        </div>
+                                        <h5>Йона Бергер: Юқумлилик. Маҳсулот ва ғоялар қандай оммалашади (қаттиқ
+                                            муқова)</h5>
+                                    </a>
+                                    <div class="reco__price-wrapper">
+                                        <!--<a href="#" class="bookmark"><i class="fas fa-bookmark"></i></a>-->
+                                        <div class="reco__price">
+                                                                                                    <span
+                                                                                                            class="reco__price-new">69 000 сум</span>
+                                        </div>
+                                        <a onclick="addToCart(18597)"
+                                           class="reco_cart rounded-circle">
+                                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 25.67 25.24" id="first-cart">
+                                                <path
+                                                        d="M24.67 9.24h-3.86a1.34 1.34 0 00-.28-.76l-6.67-8a1.33 1.33 0 00-2 0l-6.67 8a1.34 1.34 0 00-.28.76H1a1 1 0 00-.92 1.38L5.4 23.39a3 3 0 002.77 1.85h9.33a3 3 0 002.77-1.85l5.32-12.77a1 1 0 00-.92-1.38zM12.83 19.9a2.67 2.67 0 112.67-2.66 2.66 2.66 0 01-2.67 2.66zM8 9.24l4.85-5.82 4.85 5.82z"
+                                                        fill="#c2c6d1"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="recommended">
+                                    <h4>Рекомендуем</h4>
+                                    <a href="https://asaxiy.uz/product/klaus-shvab-turtinchi-sanoat-inkilobi-oldindan-buyurtma">
+                                        <div class="main__img">
+                                            <img
+                                                    src="https://assets.asaxiy.uz/product/main_image/desktop//63230a5982893.jpg.webp"
+                                                    alt="image description">
+                                        </div>
+                                        <h5>Клаус Шваб: Тўртинчи саноат инқилоби</h5>
+                                    </a>
+                                    <div class="reco__price-wrapper">
+                                        <!--<a href="#" class="bookmark"><i class="fas fa-bookmark"></i></a>-->
+                                        <div class="reco__price">
+                                                                                                    <span
+                                                                                                            class="reco__price-new">69 000 сум</span>
+                                        </div>
+                                        <a onclick="addToCart(34254)"
+                                           class="reco_cart rounded-circle">
+                                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 25.67 25.24" id="first-cart">
+                                                <path
+                                                        d="M24.67 9.24h-3.86a1.34 1.34 0 00-.28-.76l-6.67-8a1.33 1.33 0 00-2 0l-6.67 8a1.34 1.34 0 00-.28.76H1a1 1 0 00-.92 1.38L5.4 23.39a3 3 0 002.77 1.85h9.33a3 3 0 002.77-1.85l5.32-12.77a1 1 0 00-.92-1.38zM12.83 19.9a2.67 2.67 0 112.67-2.66 2.66 2.66 0 01-2.67 2.66zM8 9.24l4.85-5.82 4.85 5.82z"
+                                                        fill="#c2c6d1"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <!-- RECOMMENDEDS CAROUSEL END  -->
+            </div>
+
+            <div class="characteristic__content">
+                <div class="row">
+                    <!-- PRODUCT DESCRIPTION  -->
+                    <div class="col-sm-12 mb-40">
+                        <div class="product__description">
+                            <h4 class="product__description-title">Описание товара</h4>
+                            <div class="description__item">
+                                {{ product.description }}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PRODUCT DESCRIPTION END  -->
+                    <!-- SMALL CHARACTERISTICS   -->
+                    {% if product.book %}
+                        <div class="col-md-12 mb-40">
+                            <div class="characteristics lg-mb-40">
+                                <h6>Характеристики</h6>
+                                <div class="table-res--custom">
+                                    <table class="table table-striped table-borderless">
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-left">ISBN</td>
+                                            <td class="text-right">{{ product.book.isbn }}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="text-left">Количество страниц</td>
+                                            <td class="text-right">{{ product.book.pages }}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="text-left">Издательство</td>
+                                            <td class="text-right">{{ product.book.publisher.name }}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="text-left">Автор</td>
+                                            <td class="text-right">{{ product.book.author.first_name }} {{ product.book.author.last_name }}</td>
+                                        </tr>
+                                        {% for char in product.characteristicsmodel_set.all %}
+                                            <tr>
+                                                <td class="text-left">{{ char.attribute.name }}</td>
+                                                <td class="text-right">{{ char.value }}</td>
+                                            </tr>
+                                        {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        {% if product.characteristicsmodel_set %}
+                            <div class="col-md-12 mb-40">
+                                <div class="characteristics lg-mb-40">
+                                    <h6>Характеристики</h6>
+                                    <div class="table-res--custom">
+                                        <table class="table table-striped table-borderless">
+                                            <tbody>
+                                            {% for char in product.characteristicsmodel_set.all %}
+                                                <tr>
+                                                    <td class="text-left">{{ char.attribute.name }}</td>
+                                                    <td class="text-right">{{ char.value }}</td>
+                                                </tr>
+                                            {% endfor %}
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                    <!-- SMALL CHARACTERISTICS END  -->
+                    {#                    <span class="d-none" itemprop="description">Купить Чарльз Уилан: Яланғоч иқтисодиёт. Мураккаб соҳанинг содда қиёфаси по выгодной цене в ⭐ ASAXIY⭐ Акции⚡ гарантия ✅ доставка по Ташкенту и Узбекистану 👉 asaxiy.uz</span>#}
+                    <!-- FEEDBACKS  -->
+                    <div id="feedback" class="col-md-12 mb-40">
+                        <div class="characteristics feedback__wrapper" data-anchor-offset="15">
+                            <h6>Отзывы</h6>
+                            <div class="feedback">
+                                <div id="review" data-pjax-container="" data-pjax-push-state data-pjax-timeout="1000">
+                                    {% for review in product.reviewmodel_set.all %}
+                                        <div class="feedback__item"
+                                             itemprop="review"
+                                             itemscope
+                                             itemtype="http://schema.org/Review">
+                                            {#                                        <span class="d-none" itemprop="itemreviewed">Чарльз Уилан: Яланғоч иқтисодиёт. Мураккаб соҳанинг содда қиёфаси</span>#}
+                                            <div class="feedback__header">
+                                                <div class="feedback__user"
+                                                     itemprop="author"
+                                                     itemscope
+                                                     itemtype="http://schema.org/Person">
+                                                    <span itemprop="name">{{ review.user.full_name }}</span>
+
+                                                    <span title="Отзыв о продукте, купленном в asaxiy" class="d-none">
+                                                <svg width="24" height="20" class="ml-1 text-primary">
+                                                    <use xlink:href="/custom-assets/images/appbar.svg#cart"></use>
+                                                </svg>
+                                            </span>
+                                                </div>
+                                                <div class="rating">
+                                                    <div class="stars"
+                                                         itemprop="reviewRating"
+                                                         itemscope itemtype="http://schema.org/Rating">
+
+                                                        <span><i class="fas fa-star"></i></span>
+                                                        <span><i class="fas fa-star"></i></span>
+                                                        <span><i class="fas fa-star"></i></span>
+                                                        <span><i class="fas fa-star"></i></span>
+                                                        <span><i class="fas fa-star"></i></span>
+                                                        <meta itemprop="worstRating" content="1">
+                                                        <meta itemprop="bestRating" content="5">
+                                                        <span class="d-none"
+                                                              itemprop="ratingValue">5</span>
+                                                    </div>
+                                                    <div class="date">
+                                                        <meta itemprop="datePublished"
+                                                              content="24-06-2023">
+                                                        <span>{{ review.created_at|date:"dd-mm-YY" }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="feedback__body">
+                                                <p class="feed__text" itemprop="reviewBody">{{ review.description }}</p>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+
+                                </div>
+                            </div>
+                            <div class="links">
+                                <a id="add-review" href="product_detail.html#" class="answer-link"
+                                   data-toggle="modal"
+                                   data-target="#give-feedback">Оставить отзыв</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FEEDBACKS END  -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GIVE FEEDBACK  -->
+    <div class="modal give__feedback-modal feedback__modal awesome__modal fade" id="give-feedback" tabindex="-1"
+         role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content position-relative">
+                <div class="modal-header">
+                    <h5 class="modal-title">Оставить отзыв о {{ product.name }}</h5>
+                    <button id="review-form-close-btn" type="button" class="btn login__close close"
+                            data-dismiss="modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="rating">
+                        <span>Моя оценка:</span>
+                        <div class="more__about-stars">
+                            <a onclick="changeVote(1)" href="javascript:"><i id="star-1" class="fas fa-star"></i></a>
+                            <a onclick="changeVote(2)" href="javascript:"><i id="star-2" class="fas fa-star"></i></a>
+                            <a onclick="changeVote(3)" href="javascript:"><i id="star-3" class="fas fa-star"></i></a>
+                            <a onclick="changeVote(4)" href="javascript:"><i id="star-4" class="fas fa-star"></i></a>
+                            <a onclick="changeVote(5)" href="javascript:"><i id="star-5" class="fas fa-star"></i></a>
+                        </div>
+                    </div>
+
+                    <form id="review-form" class="review-form" action="https://asaxiy.uz/ajax/add-review" method="post">
+                        <input type="hidden" name="_csrf-asaxiy"
+                               value="GMEzr795AMehtEZk30kTy2BUyRaXgy1ICCw3oBnHNENKs1TJ2yNWjdnjLiOtIyqpEhijLvy7VS5gTVH2fJ12KA==">
+                        <div class="form-group field-form-vote required">
+
+                            <input type="hidden" id="form-vote" class="form-control" name="ProductReviewForm[vote]"
+                                   value="5">
+
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="form-group field-productreviewform-product_id">
+
+                            <input type="hidden" id="productreviewform-product_id" class="form-control"
+                                   name="ProductReviewForm[product_id]" value="38775">
+
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12 field-form-description required">
+                                <label class="control-label" for="form-description">Отзыв<span
+                                        class='text-danger'>*</span></label>
+                                <input type="text" id="form-description" class="form-control"
+                                       name="ProductReviewForm[description]" aria-required="true">
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group field-productreviewform-recaptcha required">
+
+                                <input type="hidden" id="productreviewform-recaptcha" class="form-control"
+                                       name="ProductReviewForm[recaptcha]" aria-required="true">
+                                <div id="productreviewform-recaptcha-recaptcha-review-form" class="g-recaptcha"
+                                     data-sitekey="6LdQztgaAAAAAGGkWjJt6Y8sR_easoy7AaJc8LFT"
+                                     data-input-id="productreviewform-recaptcha" data-form-id="review-form"></div>
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                        <div class="oferta mb-5" style="display: none">
+                            <div class="warn"><i class="fas fa-exclamation-triangle"></i></div>
+                            <p class="oferta-error">Пожалуйста заполните все поля</p>
+                        </div>
+                        <button type="submit" href="#"
+                                class="btn default-btn btn-orange-custom give__btn">ОТПРАВИТЬ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GIVE FEEDBACK  END-->
+
+    <script>
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_38775\",\"item_name\":\"Charlz Uilan: Yalang\\u2018och iqtisodiyot. Murakkab sohaning sodda qiyofasi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":20700,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books \\u043a\\u0438\\u0442\\u043e\\u0431\\u043b\\u0430\\u0440\\u0438\",\"price\":89700,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+            if (window.fbq != null)
+                fbq("track", "AddToCart", JSON.parse("{\"contents\":[{\"id\":\"38775\",\"quantity\":1}],\"content_ids\":[\"38775\"],\"content_name\":[\"\\u0427\\u0430\\u0440\\u043b\\u044c\\u0437 \\u0423\\u0438\\u043b\\u0430\\u043d: \\u042f\\u043b\\u0430\\u043d\\u0493\\u043e\\u0447 \\u0438\\u049b\\u0442\\u0438\\u0441\\u043e\\u0434\\u0438\\u0451\\u0442. \\u041c\\u0443\\u0440\\u0430\\u043a\\u043a\\u0430\\u0431 \\u0441\\u043e\\u04b3\\u0430\\u043d\\u0438\\u043d\\u0433 \\u0441\\u043e\\u0434\\u0434\\u0430 \\u049b\\u0438\\u0451\\u0444\\u0430\\u0441\\u0438\"],\"content_type\":\"product\",\"value\":69000,\"currency\":\"UZS\",\"content_category\":\"\\u0427\\u0430\\u0440\\u043b\\u044c\\u0437 \\u0423\\u0438\\u043b\\u0430\\u043d: \\u042f\\u043b\\u0430\\u043d\\u0493\\u043e\\u0447 \\u0438\\u049b\\u0442\\u0438\\u0441\\u043e\\u0434\\u0438\\u0451\\u0442. \\u041c\\u0443\\u0440\\u0430\\u043a\\u043a\\u0430\\u0431 \\u0441\\u043e\\u04b3\\u0430\\u043d\\u0438\\u043d\\u0433 \\u0441\\u043e\\u0434\\u0434\\u0430 \\u049b\\u0438\\u0451\\u0444\\u0430\\u0441\\u0438\"}"));
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_38775\",\"item_name\":\"Charlz Uilan: Yalang\\u2018och iqtisodiyot. Murakkab sohaning sodda qiyofasi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":20700,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books \\u043a\\u0438\\u0442\\u043e\\u0431\\u043b\\u0430\\u0440\\u0438\",\"price\":89700,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+            if (window.fbq != null)
+                fbq("trackCustom", "add_to_wishlist", JSON.parse("{\"contents\":[{\"id\":\"38775\",\"quantity\":1}],\"content_ids\":[\"38775\"],\"content_name\":[\"\\u0427\\u0430\\u0440\\u043b\\u044c\\u0437 \\u0423\\u0438\\u043b\\u0430\\u043d: \\u042f\\u043b\\u0430\\u043d\\u0493\\u043e\\u0447 \\u0438\\u049b\\u0442\\u0438\\u0441\\u043e\\u0434\\u0438\\u0451\\u0442. \\u041c\\u0443\\u0440\\u0430\\u043a\\u043a\\u0430\\u0431 \\u0441\\u043e\\u04b3\\u0430\\u043d\\u0438\\u043d\\u0433 \\u0441\\u043e\\u0434\\u0434\\u0430 \\u049b\\u0438\\u0451\\u0444\\u0430\\u0441\\u0438\"],\"content_type\":\"product\",\"value\":69000,\"currency\":\"UZS\",\"content_category\":\"\\u0427\\u0430\\u0440\\u043b\\u044c\\u0437 \\u0423\\u0438\\u043b\\u0430\\u043d: \\u042f\\u043b\\u0430\\u043d\\u0493\\u043e\\u0447 \\u0438\\u049b\\u0442\\u0438\\u0441\\u043e\\u0434\\u0438\\u0451\\u0442. \\u041c\\u0443\\u0440\\u0430\\u043a\\u043a\\u0430\\u0431 \\u0441\\u043e\\u04b3\\u0430\\u043d\\u0438\\u043d\\u0433 \\u0441\\u043e\\u0434\\u0434\\u0430 \\u049b\\u0438\\u0451\\u0444\\u0430\\u0441\\u0438\"}"));
+        }
+
+
+    </script>
+{% endblock %}

@@ -1,10 +1,10 @@
 from django.db import models
-from eav.models import Attribute
+from eav.models import Entity, Attribute
 from mptt.models import MPTTModel, TreeForeignKey
 from datetime import timedelta
-from abstracts.models import BaseSlugModel, BaseProductBookRelationModel, BaseSharedRelationModel, BaseDateTimeModel
-from books.models import BookModel
-from products.models import ProductModel
+from abstracts.models import BaseSlugModel, BaseDateTimeModel
+from big_products.models import BigProductModel
+from users.models import UserModel
 
 
 class CategoryModel(MPTTModel, BaseSlugModel):
@@ -24,8 +24,9 @@ class CategoryModel(MPTTModel, BaseSlugModel):
         db_table = 'categories'
 
 
-class ImageModel(BaseProductBookRelationModel):
-    image = models.ImageField(upload_to='images/products_list')
+class ImageModel(models.Model):
+    product = models.ForeignKey(BigProductModel, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='images/products_list/')
 
     class Meta:
         verbose_name = 'Image'
@@ -33,7 +34,9 @@ class ImageModel(BaseProductBookRelationModel):
         db_table = 'images'
 
 
-class ReviewModel(BaseSharedRelationModel, BaseDateTimeModel):
+class ReviewModel(BaseDateTimeModel):
+    product = models.ForeignKey(BigProductModel, on_delete=models.CASCADE)
+    user = models.OneToOneField(UserModel, on_delete=models.CASCADE)
     description = models.TextField(null=True, blank=True)
     rating = models.PositiveSmallIntegerField(default=0)
 
@@ -47,11 +50,11 @@ class ReviewModel(BaseSharedRelationModel, BaseDateTimeModel):
 
 
 class DiscountModel(models.Model):
-    product = models.OneToOneField(ProductModel, on_delete=models.CASCADE)
-    book = models.OneToOneField(BookModel, on_delete=models.CASCADE)
+    product = models.OneToOneField(BigProductModel, on_delete=models.CASCADE)
     start_date = models.DateTimeField(auto_now_add=True)
     end_date = models.DateTimeField()
     is_daily = models.BooleanField(default=False)
+    price = models.IntegerField()
 
     def save(self, *args, **kwargs):
         if self.is_daily:
@@ -67,11 +70,13 @@ class DiscountModel(models.Model):
         db_table = 'discounts'
 
 
-class CharacteristicsModel(Attribute):
-    entity = models.ForeignKey(ProductModel, on_delete=models.CASCADE)
+class CharacteristicsModel(models.Model):
+    product = models.ForeignKey(BigProductModel, on_delete=models.CASCADE)
+    attribute = models.ForeignKey(Attribute, on_delete=models.CASCADE)
+    value = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.entity.model
+        return self.product.model
 
     class Meta:
         verbose_name = 'Characteristic'

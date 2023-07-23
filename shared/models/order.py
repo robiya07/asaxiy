@@ -1,8 +1,7 @@
 from django.db import models
 
 from abstracts.models import BaseDateTimeModel
-from books.models import BookModel
-from products.models import ProductModel
+from big_products.models import BigProductModel
 from users.models import UserModel
 
 
@@ -16,10 +15,9 @@ class OrderModel(BaseDateTimeModel):
     status = models.CharField(max_length=10, null=True, blank=True, choices=STATUS.choices, default=STATUS.WAIT)
     address = models.CharField(max_length=255)
     index_p = models.PositiveIntegerField(null=True, blank=True)
-    product = models.OneToOneField(ProductModel, on_delete=models.CASCADE, null=True, blank=True)
+    product = models.OneToOneField(BigProductModel, on_delete=models.CASCADE)
     paid = models.PositiveIntegerField(null=True, blank=True)
     rem_sum = models.PositiveIntegerField(null=True, blank=True)
-    book = models.OneToOneField(BookModel, on_delete=models.SET_NULL, null=True, blank=True)
     user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
 
     def __str__(self):

@@ -112,63 +112,8 @@
         new Notification(noteTitle, noteOptions);
     });
 </script>
-<script src="{% static "custom-assets/js/jquery/dist/jquery.min.js" %}"></script>
-<script src="{% static "custom-assets/js/jquery.countdown.min.js" %}"></script>
-<script src="{% static "assets/h/disable-submit-buttons.js" %}"></script>
-<script src="{% static "assets/k/yii.js" %}"></script>
-<script src="{% static "assets/a/js/bootstrap-notify.min.js" %}"></script>
-<script src="{% static "assets/d/js/swiper-bundle.min.js" %}"></script>
-<script src="{% static "assets/f/js/jquery.fancybox.min.js" %}"></script>
-<script src="{% static "assets/m/js/jquery.nice-select.min.js" %}"></script>
-<script src="{% static "custom-assets/js/lazyload.min.js" %}"></script>
-<script src="{% static "custom-assets/js/bootstrap.bundle.min.js" %}"></script>
-<script src="{% static "custom-assets/js/main.js" %}"></script>
-<script src="{% static "custom-assets/js/googleService.js" %}"></script>
-<script src="{% static "assets/b/jquery.pjax.js" %}"></script>
-<script src="{% static "assets/e/jquery.inputmask.bundle.js" %}"></script>
-<script src="{% static "assets/k/yii.validation.js" %}"></script>
-<script src="{% static "assets/k/yii.activeForm.js" %}"></script>
-<script>    let submit_block_lang = document.documentElement.lang, submit_block_baseUrl = '/' + submit_block_lang;
-if (submit_block_lang === 'ru') submit_block_baseUrl = '';
-
-function openValidInput() {
-    $('#submit-block').show();
-    $('#get-sms-btn').hide();
-}
-
-function sendSms() {
-    let form = $('#login-form');
-    $.ajax({
-        url: submit_block_baseUrl + '/ajax/send-verification',
-        type: 'POST',
-        data: form.serialize(),
-        success: function (response) {
-            if (response) {
-                openValidInput()
-            } else {
-
-            }
-        },
-        error: function () {
-            const loginNotification = $('#login-notification');
-            loginNotification.addClass('error')
-            loginNotification.show();
-            loginNotification.find('.error-message').text('Serverda xatolik');
-        }
-    });
-}
-
-const body = $('body');
-body.on('beforeSubmit', '#login-form', function () {
-    let form = $(this);
-    // return false if form still have some validation errors
-    if (form.find('.has-error').length) {
-        return false;
-    }
-    // submit form
-    return true;
-});    </script>
-<script>jQuery(function ($) {
+<script>
+    jQuery(function ($) {
     jQuery(document).pjax("#test-cart a", {
         "push": true,
         "replace": false,
@@ -219,3 +164,186 @@ body.on('beforeSubmit', '#login-form', function () {
     }], {"validationUrl": "\/ajax\/login-validate"});
 });
 </script>
+<script>
+    jQuery(function ($) {
+    jQuery(document).pjax("#review a", {
+        "push": true,
+        "replace": false,
+        "timeout": 1000,
+        "scrollTo": false,
+        "container": "#review"
+    });
+    jQuery(document).off("submit", "#review form[data-pjax]").on("submit", "#review form[data-pjax]", function (event) {
+        jQuery.pjax.submit(event, {
+            "push": true,
+            "replace": false,
+            "timeout": 1000,
+            "scrollTo": false,
+            "container": "#review"
+        });
+    });
+    jQuery('#review-form').yiiActiveForm([{
+        "id": "form-vote",
+        "name": "vote",
+        "container": ".field-form-vote",
+        "input": "#form-vote",
+        "validate": function (attribute, value, messages, deferred, $form) {
+            yii.validation.required(value, messages, {"message": "Необходимо заполнить «Оценка»."});
+            yii.validation.number(value, messages, {
+                "pattern": /^[+-]?\d+$/,
+                "message": "Значение «Оценка» должно быть целым числом.",
+                "min": 1,
+                "tooSmall": "Значение «Оценка» должно быть не меньше 1.",
+                "max": 5,
+                "tooBig": "Значение «Оценка» не должно превышать 5.",
+                "skipOnEmpty": 1
+            });
+        }
+    }, {
+        "id": "form-full_name",
+        "name": "full_name",
+        "container": ".field-form-full_name",
+        "input": "#form-full_name",
+        "validate": function (attribute, value, messages, deferred, $form) {
+            yii.validation.required(value, messages, {"message": "Необходимо заполнить «Имя»."});
+            yii.validation.string(value, messages, {
+                "message": "Значение «Имя» должно быть строкой.",
+                "max": 255,
+                "tooLong": "Значение «Имя» должно содержать максимум 255 символа.",
+                "skipOnEmpty": 1
+            });
+        }
+    }, {
+        "id": "form-description",
+        "name": "description",
+        "container": ".field-form-description",
+        "input": "#form-description",
+        "validate": function (attribute, value, messages, deferred, $form) {
+            yii.validation.required(value, messages, {"message": "Необходимо заполнить «Отзыв»."});
+            yii.validation.string(value, messages, {
+                "message": "Значение «Отзыв» должно быть строкой.",
+                "max": 255,
+                "tooLong": "Значение «Отзыв» должно содержать максимум 255 символа.",
+                "skipOnEmpty": 1
+            });
+        }
+    }, {
+        "id": "productreviewform-recaptcha",
+        "name": "recaptcha",
+        "container": ".field-productreviewform-recaptcha",
+        "input": "#productreviewform-recaptcha",
+        "validate": function (attribute, value, messages, deferred, $form) {
+            yii.validation.required(value, messages, {"message": "Необходимо заполнить «Подтвердите, что вы не робот»."});
+            if (!value) {
+                messages.push("Robot emasligingizni tasdiqlang");
+            }
+        }
+    }], []);
+    jQuery(document).pjax("#test-cart a", {
+        "push": true,
+        "replace": false,
+        "timeout": 1000,
+        "scrollTo": false,
+        "container": "#test-cart"
+    });
+    jQuery(document).off("submit", "#test-cart form[data-pjax]").on("submit", "#test-cart form[data-pjax]", function (event) {
+        jQuery.pjax.submit(event, {
+            "push": true,
+            "replace": false,
+            "timeout": 1000,
+            "scrollTo": false,
+            "container": "#test-cart"
+        });
+    });
+    jQuery("#loginform-phone").inputmask(inputmask_a055eecd);
+    jQuery('#login-form').yiiActiveForm([{
+        "id": "loginform-phone",
+        "name": "phone",
+        "container": ".field-loginform-phone",
+        "input": "#loginform-phone",
+        "enableAjaxValidation": true,
+        "validate": function (attribute, value, messages, deferred, $form) {
+            yii.validation.required(value, messages, {"message": "Необходимо заполнить «Телефон»."});
+            yii.validation.regularExpression(value, messages, {
+                "pattern": /^(?:\+9{2}8\([0-9]{2}\)[0-9]{3}\-[0-9]{2}\-[0-9]{2})$/,
+                "not": false,
+                "message": "Не верный формат",
+                "skipOnEmpty": 1
+            });
+        }
+    }, {
+        "id": "loginform-verification",
+        "name": "verification",
+        "container": ".field-loginform-verification",
+        "input": "#loginform-verification",
+        "enableAjaxValidation": true,
+        "validate": function (attribute, value, messages, deferred, $form) {
+            yii.validation.required(value, messages, {"message": "Необходимо заполнить «СМС код»."});
+            yii.validation.string(value, messages, {
+                "message": "Значение «СМС код» должно быть строкой.",
+                "is": 5,
+                "notEqual": "Значение «СМС код» должно содержать 5 символа.",
+                "skipOnEmpty": 1
+            });
+        }
+    }], {"validationUrl": "\/ajax\/login-validate"});
+});
+</script>
+<script src="{% static "custom-assets/js/jquery/dist/jquery.min.js" %}"></script>
+<script src="{% static "custom-assets/js/jquery.countdown.min.js" %}"></script>
+<script src="{% static "assets/h/disable-submit-buttons.js" %}"></script>
+<script src="{% static "assets/k/yii.js" %}"></script>
+<script src="{% static "assets/a/js/bootstrap-notify.min.js" %}"></script>
+<script src="{% static "assets/d/js/swiper-bundle.min.js" %}"></script>
+<script src="{% static "assets/f/js/jquery.fancybox.min.js" %}"></script>
+<script src="{% static "assets/m/js/jquery.nice-select.min.js" %}"></script>
+<script src="{% static "custom-assets/js/lazyload.min.js" %}"></script>
+<script src="{% static "custom-assets/js/productView.js" %}"></script>
+<script src="{% static "custom-assets/js/bootstrap.bundle.min.js" %}"></script>
+<script src="{% static "custom-assets/js/main.js" %}"></script>
+<script src="{% static "custom-assets/js/googleService.js" %}"></script>
+<script src="{% static "assets/b/jquery.pjax.js" %}"></script>
+<script src="{% static "assets/e/jquery.inputmask.bundle.js" %}"></script>
+<script src="{% static "assets/k/yii.validation.js" %}"></script>
+<script src="{% static "assets/k/yii.activeForm.js" %}"></script>
+
+<script>    let submit_block_lang = document.documentElement.lang, submit_block_baseUrl = '/' + submit_block_lang;
+if (submit_block_lang === 'ru') submit_block_baseUrl = '';
+
+function openValidInput() {
+    $('#submit-block').show();
+    $('#get-sms-btn').hide();
+}
+
+function sendSms() {
+    let form = $('#login-form');
+    $.ajax({
+        url: submit_block_baseUrl + '/ajax/send-verification',
+        type: 'POST',
+        data: form.serialize(),
+        success: function (response) {
+            if (response) {
+                openValidInput()
+            } else {
+
+            }
+        },
+        error: function () {
+            const loginNotification = $('#login-notification');
+            loginNotification.addClass('error')
+            loginNotification.show();
+            loginNotification.find('.error-message').text('Serverda xatolik');
+        }
+    });
+}
+
+const body = $('body');
+body.on('beforeSubmit', '#login-form', function () {
+    let form = $(this);
+    // return false if form still have some validation errors
+    if (form.find('.has-error').length) {
+        return false;
+    }
+    // submit form
+    return true;
+});    </script>

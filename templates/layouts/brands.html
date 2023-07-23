@@ -1,0 +1,24 @@
+{% load brands %}
+<!-- PARTNERS  -->
+<section class="partners features mb-40">
+    <div class="container">
+        <div class="partners__list swiper-container">
+            <div class="swiper-wrapper">
+            {% get_brands as brands %}
+                {% for brand in brands %}
+                    <div class="swiper-slide">
+                        <div class="feature__item partner__item">
+                            <a href="{% url "shared:brand" brand.slug %}">
+                                <img class="partner__img"
+                                     src="{{ brand.logo.url }}"
+                                     alt="{{ brand.name }}">
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- PARTNERS END  -->

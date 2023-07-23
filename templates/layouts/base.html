@@ -53,7 +53,7 @@
     {% block content %}
 
     {% endblock %}
-
+{% include "layouts/brands.html" %}
 </main>
 <!-- MAIN END -->
 
@@ -65,7 +65,7 @@
             <div class="app-content">
                 <div class="download__app-header">
                     <a class="logo" href="index.html">
-                        <img data-src="/custom-assets/images/logos/asaxiy-logo-white.svg" class="lazyload"
+                        <img data-src="{% static "custom-assets/images/logos/asaxiy-logo-white.svg" %}" class="lazyload"
                              alt="asaxiy logo" loading="lazy">
                     </a>
                     <p>Ваш интернет магазин</p>
@@ -73,25 +73,25 @@
                 <div class="download__app-footer">
                     <a class="app-link" href="https://apps.apple.com/uz/app/asaxiy-market/id1532401944" rel="nofollow"
                        target="_blank">
-                        <img data-src="/custom-assets/images/app-store.svg" class="lazyload"
+                        <img data-src="{% static "custom-assets/images/app-store.svg" %}" class="lazyload"
                              alt="asaxiy market app" loading="lazy">
                     </a>
                     <a class="app-link" href="https://play.google.com/store/apps/details?id=uz.asaxiy.market"
                        rel="nofollow"
                        target="_blank">
-                        <img data-src="/custom-assets/images/google-play.svg" class="lazyload" alt="asaxiy market app"
+                        <img data-src="{% static "custom-assets/images/google-play.svg" %}" class="lazyload" alt="asaxiy market app"
                              loading="lazy">
                     </a>
                     <a class="app-link" href="https://appgallery.huawei.com/app/C107759131"
                        rel="nofollow"
                        target="_blank">
-                        <img data-src="/custom-assets/images/app-gallery.svg" class="lazyload" alt="asaxiy market app"
+                        <img data-src="{% static "custom-assets/images/app-gallery.svg" %}" class="lazyload" alt="asaxiy market app"
                              loading="lazy">
                     </a>
                 </div>
             </div>
             <div class="app-img d-none d-md-flex justify-content-md-center">
-                <img data-src="/custom-assets/images/asaxiy-apps.png" class="lazyload" alt="asaxiy app image"
+                <img data-src="{% static "custom-assets/images/asaxiy-apps.png" %}" class="lazyload" alt="asaxiy app image"
                      loading="lazy">
             </div>
         </div>
@@ -105,7 +105,7 @@
         <div class="features__list">
             <a href="index.html#" class="feature__item pointer__e-none">
                 <div class="feature__img">
-                    <img class="img-fluid lazyload" data-src="/custom-assets/images/icons/market.svg" alt="market"
+                    <img class="img-fluid lazyload" data-src="{% static "custom-assets/images/icons/market.svg" %}" alt="market"
                          loading="lazy">
                 </div>
                 <div class="feature__text">
@@ -115,7 +115,7 @@
             </a>
             <a href="https://asaxiy.uz/page/delivery" class="feature__item">
                 <div class="feature__img">
-                    <img class="img-fluid lazyload" data-src="/custom-assets/images/icons/fast-delivery.svg"
+                    <img class="img-fluid lazyload" data-src="{% static "custom-assets/images/icons/fast-delivery.svg" %}"
                          alt="delivery" loading="lazy">
                 </div>
                 <div class="feature__text">
@@ -125,7 +125,7 @@
             </a>
             <a href="https://asaxiy.uz/page/rules" class="feature__item">
                 <div class="feature__img">
-                    <img class="img-fluid lazyload" data-src="/custom-assets/images/icons/return.svg" alt="return"
+                    <img class="img-fluid lazyload" data-src="{% static "custom-assets/images/icons/return.svg" %}" alt="return"
                          loading="lazy" style="max-width: none;">
                 </div>
                 <div class="feature__text">
@@ -135,7 +135,7 @@
             </a>
             <a href="https://asaxiy.uz/page/usloviya-rassrochki" class="feature__item">
                 <div class="feature__img">
-                    <img class="img-fluid lazyload" data-src="/custom-assets/images/icons/card.svg" alt="card"
+                    <img class="img-fluid lazyload" data-src="{% static "custom-assets/images/icons/card.svg" %}" alt="card"
                          loading="lazy">
                 </div>
                 <div class="feature__text">
@@ -304,6 +304,39 @@
 <!-- LOGIN MODAL  -->
 {% include "layouts/login_modal.html" %}
 <!-- LOGIN MODAL END  -->
+
+<!-- ADD CARD MODAL  -->
+<div class="modal give__feedback-modal awesome__modal fade" id="addCardModal" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px!important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Yangi karta qo'shish</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="control-label">Card number:</label>
+                        <input type="number" class="form-control" placeholder="Karta raqamini yozing">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Expiry:</label>
+                        <input type="number" class="form-control" placeholder="Amal qilish muddati">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="w-100">
+                    <button type="button" class="btn default-btn btn-primary-custom w-100 py-2">Add new card</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ADD CARD MODAL END  -->
 
 <!-- GO TOP  -->
 <div class="go-top d-none">

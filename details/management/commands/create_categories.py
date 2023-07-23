@@ -3,7 +3,6 @@ from django.core.management.base import BaseCommand
 from details.models import CategoryModel
 from faker import Faker
 import os
-import random
 import requests
 
 fake = Faker()

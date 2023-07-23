@@ -4,8 +4,8 @@
     <div class="header__top position-relative">
         <div class="container">
             <div class="header__top-group">
-                <a class="header__logo pointer__e-none"
-                   href="index.html">
+                <a class="header__logo"
+                   href="{% url "details:home" %}">
                     <img class="img-fluid" src="{% static "custom-assets/images/logos/asaxiy-logo.svg" %}"
                          alt="asaxiy logo">
                 </a>
@@ -159,11 +159,10 @@
                     <ul class="mega__menu-list">
                         {% for main_cat in main_cats %}
                             <li>
-                                <a href="https://asaxiy.uz/product/knigi"
+                                <a href="{% url "details:main_c" main_cat.slug %}"
                                    class="tab-open"
                                    data-id="{{ main_cat.slug }}">
-                                    <img src="https://assets.asaxiy.uz/category//63f8c1c49c4ce.png"
-                                         alt="Книги">
+                                    <p style="margin-top: 6%; margin-left: -8%; margin-right: 5%">⤑</p>
                                     {{ main_cat.name }}</a>
                             </li>
                         {% endfor %}
@@ -182,11 +181,12 @@
                                     {% for cat2 in main_cat|get_second_categories %}
                                         <div class="mega__menu-item">
                                             <a class="menu__item-title"
-                                               href="https://asaxiy.uz/product/knigi/badiy-adabiyot">{{ cat2.name }}</a>
+                                               href="{% url "details:second_c" main_cat.slug cat2.slug %}">{{ cat2.name }}</a>
                                             <div class="mega__menu-item-inner">
-                                                <a href="https://asaxiy.uz/product/knigi/badiy-adabiyot">Все товары</a>
+                                                <a href="{% url "details:second_c" main_cat.slug cat2.slug %}">Все
+                                                    товары</a>
                                                 {% for cat3 in cat2|get_child_categories %}
-                                                    <a href="https://asaxiy.uz/product/knigi/badiy-adabiyot/zhahon-adabiyoti">{{ cat3.name }}</a>
+                                                    <a href="{% url "details:third_c" main_cat.slug cat2.slug cat3.slug %}">{{ cat3.name }}</a>
                                                 {% endfor %}
                                             </div>
                                         </div>

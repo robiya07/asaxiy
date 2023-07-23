@@ -1,0 +1,519 @@
+{% extends "layouts/base.html" %}
+{% load static product %}
+
+{% block content %}
+
+
+    <section class="subcategories mt-32 mb-40">
+        <div class="container">
+
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble"
+                    itemscope
+                    itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item"
+                        itemprop="itemListElement"
+                        itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://asaxiy.uz/">
+                <span itemprop="name">
+                Главная                </span>
+                            <meta itemprop="position" content="1">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item"
+                        itemprop="itemListElement"
+                        itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href='https://asaxiy.uz/product'>
+                            <span itemprop="name">Товары</span>
+                            <meta itemprop="position" content="2">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item"
+                        itemprop="itemListElement"
+                        itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href='https://asaxiy.uz/product/telefony-i-gadzhety'>
+                            <span itemprop="name">Телефоны и гаджеты</span>
+                            <meta itemprop="position" content="3">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span> Телефоны </span>
+                    </li>
+                </ol>
+            </nav>
+
+
+            <div class="row">
+                <div class="col-lg-3 d-lg-block d-none">
+                    <div class="sidebar_filters">
+                        <aside class="sidebar_filter">
+                            <div class="sidebar_filter-header">
+                                <div class="sidebar_filter-title">Подкатегории</div>
+                            </div>
+                            <div class="sidebar_filter-body">
+                                <ul id="category_list">
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/knopochnye-telefony"
+                                           class="link">Кнопочные телефоны</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/smartfony"
+                                           class="link">Смартфоны</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/radiotelefoni"
+                                           class="link">Радиотелефоны</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/provodniye-telefoni"
+                                           class="link">Проводные телефоны</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/ip-telefony"
+                                           class="link">IP-телефоны</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+
+
+                        <aside class="sidebar_filter">
+                            <div class="sidebar_filter-header">
+                                <div class="sidebar_filter-title">Производитель</div>
+                            </div>
+                            <div class="sidebar_filter-body">
+                                <ul>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=apple"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Apple</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=bk-mobile"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>BQ-Mobile</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=blackview"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Blackview</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=gigaset"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Gigaset</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=google"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Google</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=grandstream"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Grandstream </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=honor"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Honor</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=huawei"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Huawei</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=infinix"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Infinix</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=inoi"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Inoi</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=nokia"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Nokia</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=novey"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Novey</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=oneplus"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>OnePlus</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=panasonic"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Panasonic</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=realme"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Realme</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=redmi"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Redmi</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=samsung"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Samsung</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=tecno"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>TECNO</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=tecno-mobile"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Tecno Mobile</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=vtech"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>VTECH</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=vivo"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Vivo</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=xiaomi"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Xiaomi</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=zte"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>ZTE</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/brand=radiotelefony"
+                                           class="link__checkbox " rel=INDEX,FOLLOW>Радиотелефоны</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <aside class="sidebar_filter">
+                            <div class="sidebar_filter-header">
+                                <div
+                                        class="sidebar_filter-title">Количество SIM-карт
+                                </div>
+                            </div>
+                            <div class="sidebar_filter-body">
+                                <ul>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/kolichestvo-sim-kart=1"
+                                           class="link__checkbox "
+                                           rel=INDEX,FOLLOW>
+                                            1 </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/kolichestvo-sim-kart=2"
+                                           class="link__checkbox "
+                                           rel=INDEX,FOLLOW>
+                                            2 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <aside class="sidebar_filter">
+                            <div class="sidebar_filter-header">
+                                <div
+                                        class="sidebar_filter-title">Стандарт связи
+                                </div>
+                            </div>
+                            <div class="sidebar_filter-body">
+                                <ul>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/standart-svyazi=3g"
+                                           class="link__checkbox "
+                                           rel=INDEX,FOLLOW>
+                                            3G </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/standart-svyazi=4g-2"
+                                           class="link__checkbox "
+                                           rel=INDEX,FOLLOW>
+                                            4G </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/standart-svyazi=5g"
+                                           class="link__checkbox "
+                                           rel=INDEX,FOLLOW>
+                                            5G </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-12">
+                    <div class="subcategories__header">
+                        <h1>
+                            Телефоны </h1>
+                        <div class="d-flex justify-content-between">
+                            <div class="nice-select nc__select right m-1">
+                                <span class="current">24</span>
+                                <ul class="list">
+                                    <a class="pointer__e-none"
+                                       href="telefony.html">
+                                        <li class="option selected">24</li>
+                                    </a>
+                                    <a class=""
+                                       href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony?size=48">
+                                        <li class="option ">48</li>
+                                    </a>
+                                    <a class=""
+                                       href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony?size=72">
+                                        <li class="option ">72</li>
+                                    </a>
+                                    <a class=""
+                                       href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony?size=96">
+                                        <li class="option ">96</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div class="nice-select nc__select right m-1">
+                                <span
+                                        class="current">Сортировка</span>
+                                <ul class="list">
+                                    <a href="telefony.html">
+                                        <li class="option selected">Сортировка</li>
+                                    </a>
+                                    <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/sort=date">
+                                        <li class="option ">Новинки</li>
+                                    </a>
+                                    <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/sort=cheap">
+                                        <li class="option ">Сначала дешевле</li>
+                                    </a>
+                                    <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/sort=expensive">
+                                        <li class="option ">Сначала дороже</li>
+                                    </a>
+                                    <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/sort=rate-low">
+                                        <li class="option ">Рейтинг (начиная с низкого)</li>
+                                    </a>
+                                    <a href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/sort=rate-high">
+                                        <li class="option ">Рейтинг (начиная с высокого)</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row custom-gutter mb-40">
+                        {% for product in products %}
+                            <div class="col-6 col-xl-3 col-md-4">
+                                <div
+                                        class="product__item d-flex flex-column justify-content-between ">
+                                    {% if product.discountmodel %}
+                                        <span class="pr_flash pr_discount">Скидка</span>
+                                    {% endif %}
+                                    <button type="button" class="product__item-cart border-0"
+                                            onclick="addToCartAnim(this, 29145);addToCartGtag();">
+                                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z"
+                                                    fill="white"/>
+                                            <path
+                                                    d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z"
+                                                    fill="white"/>
+                                            <path
+                                                    d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z"
+                                                    fill="white"/>
+                                        </svg>
+                                    </button>
+
+                                    <button type="button" class="product__item-heart border-0 p-0 bg-transparent"
+                                            onclick="addToFavourites(this,29145);addToWishlistGtag();">
+                                        <img src="{% static "custom-assets/images/icons/heart.svg" %}">
+                                    </button>
+
+                                    <a href="{% url "big_products:product_detail" product.slug %}"
+                                       onclick='selectItemGtag()'>
+                                        <div class="product__item-img swiper-container">
+                                            <div class="swiper-wrapper">
+                                                {% for image in product.imagemodel_set.all %}
+                                                    <div class="swiper-slide">
+                                                        <img class="img-fluid lazyload"
+                                                             data-src="{{ image.image.url }}"
+                                                             loading="lazy"
+                                                             alt="{{ product.model }}">
+                                                    </div>
+                                                {% endfor %}
+
+
+                                            </div>
+                                        </div>
+                                        <div class="product__item-info">
+                                            <p class="title__link">
+                                                <span class="product__item__info-title">{{ product.name }}</span>
+                                            </p>
+                                            <div class="product__item-info--rating">
+                                                <div class="product__item-rating--stars">
+
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                </div>
+                                                <div class="product__item-info--comments">
+                                                    <svg width="12" height="12">
+                                                        <use xlink:href="#comment-icon" x="0" y="0"></use>
+                                                    </svg>
+                                                    <span>{{ product.reviewmodel_set.count }} отзывов</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="product__item-info--prices">
+                                                <div class="produrct__item-prices--wrapper">
+                                                    {% if product.discountmodel %}
+                                                        <span class="product__item-old--price">{{ product.price|format_price }} сум</span>
+                                                        <span class="product__item-price">{{ product.discountmodel.price|format_price }} сум</span>
+                                                    {% else %}
+                                                        <span class="product__item-price">{{ product.price|format_price }} сум</span>
+                                                    {% endif %}
+                                                    {% if product.installment %}
+                                                        <div class="installment__price">142 900 сум / 12 мес</div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="mt-3">
+                                        <div class="row s__custom-gutter">
+                                            {% if product.installment %}
+                                                <div class="col-sm-5">
+                                                    <a onclick="show_installment(2365); installmentButtonGtag()"
+                                                       data-target="#installment"
+                                                       data-toggle="modal" href="index.html#"
+                                                       class="btn default-btn btn-green-custom p-2 w-100"
+                                                       style="font-size: 13px">Рассрочка</a>
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <a href="https://asaxiy.uz/order/one-click/chajnik-elektricheskij-bosch-twk-8611"
+                                                       onclick="show_one_click(2365);oneClickOrderGtag()"
+                                                       class="btn default-btn btn-primary-custom p-2 w-100"
+                                                       style="font-size: 13px">
+                                                        Купить в 1 клик </a>
+                                                </div>
+                                            {% else %}
+                                                <div class="col-sm-12">
+                                                    <a href="https://asaxiy.uz/order/one-click/kondicioner-sitronic-silver-18"
+                                                       onclick="show_one_click(7877);oneClickOrderGtag()"
+                                                       class="btn default-btn btn-primary-custom p-2 w-100"
+                                                       style="font-size: 13px">
+                                                        Купить в 1 клик </a>
+                                                </div>
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+                                    {#                                    <div class="mt-3">#}
+                                    {#                                        <div class="row s__custom-gutter">#}
+                                    {#                                            <div class="col-sm-12">#}
+                                    {#                                                <a href="https://asaxiy.uz/order/one-click/smartfon-xiaomi-redmi-note-11-pro-8128-gb-grayblue"#}
+                                    {#                                                   onclick="show_one_click(29145);oneClickOrderGtag()"#}
+                                    {#                                                   class="btn default-btn btn-primary-custom p-2 w-100"#}
+                                    {#                                                   style="font-size: 13px">#}
+                                    {#                                                    Купить в 1 клик </a>#}
+                                    {#                                            </div>#}
+                                    {#                                        </div>#}
+                                    {#                                    </div>#}
+                                </div>
+                            </div>
+
+                            <script>
+                                function selectItemGtag() {
+                                    let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_29145\",\"item_name\":\"Xiaomi Redmi Note 11 Pro 8\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":971900,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":4211400,\"quantity\":1}]}}");
+                                    window.dataLayer.push(product_item);
+                                    gtag("event", "select_item", {
+                                        currency: "UZS",
+                                        value: product_item.ecommerce.items[0].price,
+                                        items: product_item.ecommerce.items
+                                    });
+                                }
+
+                                function installmentButtonGtag() {
+                                    let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_29145\",\"item_name\":\"Xiaomi Redmi Note 11 Pro 8\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":971900,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":4211400,\"quantity\":1}]}}");
+                                    window.dataLayer.push(data);
+                                    gtag("event", "installment", {
+                                        currency: "UZS",
+                                        value: data.ecommerce.items[0].price,
+                                        items: data.ecommerce.items
+                                    });
+                                }
+
+                                function oneClickOrderGtag() {
+                                    let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_29145\",\"item_name\":\"Xiaomi Redmi Note 11 Pro 8\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":971900,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":4211400,\"quantity\":1}]}}");
+                                    window.dataLayer.push(data);
+                                    gtag("event", "one_click_order", {
+                                        currency: "UZS",
+                                        value: data.ecommerce.items[0].price,
+                                        items: data.ecommerce.items
+                                    });
+                                }
+
+                                function addToCartGtag() {
+                                    let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_29145\",\"item_name\":\"Xiaomi Redmi Note 11 Pro 8\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":971900,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":4211400,\"quantity\":1}]}}");
+                                    window.dataLayer.push(product_item);
+                                    gtag("event", "add_to_cart", {
+                                        currency: "UZS",
+                                        value: product_item.ecommerce.items[0].price,
+                                        items: product_item.ecommerce.items
+                                    });
+                                }
+
+                                function addToWishlistGtag() {
+                                    let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_29145\",\"item_name\":\"Xiaomi Redmi Note 11 Pro 8\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":971900,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":4211400,\"quantity\":1}]}}");
+                                    window.dataLayer.push(product_item);
+                                    gtag("event", "add_to_wishlist", {
+                                        currency: "UZS",
+                                        value: product_item.ecommerce.items[0].price,
+                                        items: product_item.ecommerce.items
+                                    });
+                                }
+
+                            </script>
+                        {% endfor %}
+
+
+                    </div>
+                    <nav class="pagination__nav">
+                        <ul class="pagination">
+                            <li class="page-item prev disabled"><span class="d-none">&laquo;</span></li>
+                            <li class="page-item active"><a class="page-link" href="telefony.html"
+                                                            data-page="0">1</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/page=2"
+                                                     data-page="1">2</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/page=3"
+                                                     data-page="2">3</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/page=4"
+                                                     data-page="3">4</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/page=5"
+                                                     data-page="4">5</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="https://asaxiy.uz/product/telefony-i-gadzhety/telefony/page=2"
+                                                     data-page="1">&raquo;</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        selectItemGtag();
+
+        function selectItemGtag() {
+            let data = JSON.parse("{\"item_list_id\":\"filtered_products\",\"item_list_name\":\" \\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\\u044b \\u1409 \\u041a\\u0443\\u043f\\u0438\\u0442\\u044c \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d \\u0432 \\u0423\\u0437\\u0431\\u0435\\u043a\\u0438\\u0441\\u0442\\u0430\\u043d\\u0435 \\u2022 Asaxiy\",\"items\":[{\"item_id\":\"SKU_29145\",\"item_name\":\"Xiaomi Redmi Note 11 Pro 8\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":1,\"discount\":971900,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":4211400,\"quantity\":1},{\"item_id\":\"SKU_40189\",\"item_name\":\"Samsung Galaxy S23 Ultra 12\\/256GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":2,\"discount\":3460700,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":14996200,\"quantity\":1},{\"item_id\":\"SKU_42668\",\"item_name\":\"Samsung Galaxy A14 4\\/128GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":3,\"discount\":634600,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2750000,\"quantity\":1},{\"item_id\":\"SKU_43220\",\"item_name\":\"Xiaomi Redmi Note 12 Pro 8\\/256GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":4,\"discount\":952800,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":4128800,\"quantity\":1},{\"item_id\":\"SKU_42682\",\"item_name\":\"Samsung Galaxy A14 4\\/64GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":5,\"discount\":576900,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2500000,\"quantity\":1},{\"item_id\":\"SKU_41436\",\"item_name\":\"Xiaomi Redmi Note 12 4\\/128GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":6,\"discount\":638500,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2766700,\"quantity\":1},{\"item_id\":\"SKU_34468\",\"item_name\":\"iPhone 14 Pro Max 128GB Deep Purple smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":7,\"discount\":4265000,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":18481800,\"quantity\":1},{\"item_id\":\"SKU_27906\",\"item_name\":\"Samsung Galaxy S22 8\\/256GB Qora smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":8,\"discount\":2114700,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":9163600,\"quantity\":1},{\"item_id\":\"SKU_34339\",\"item_name\":\"iPhone 14 Pro 128GB Deep Purple smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":9,\"discount\":3872200,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":16779500,\"quantity\":1},{\"item_id\":\"SKU_34343\",\"item_name\":\"iPhone 14 Pro 128GB Space Black smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":10,\"discount\":3872200,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":16779500,\"quantity\":1},{\"item_id\":\"SKU_28327\",\"item_name\":\"Samsung Galaxy S22 8\\/128GB Pink smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":11,\"discount\":2411100,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":10448000,\"quantity\":1},{\"item_id\":\"SKU_42934\",\"item_name\":\"Samsung Galaxy A54 8\\/128GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":12,\"discount\":1181500,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":5119700,\"quantity\":1},{\"item_id\":\"SKU_28139\",\"item_name\":\"Samsung Galaxy S22+ 8\\/128GBB Black smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":13,\"discount\":2923500,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":12668500,\"quantity\":1},{\"item_id\":\"SKU_28328\",\"item_name\":\"Samsung Galaxy S22 8\\/128GB White Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":14,\"discount\":2360100,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":10227200,\"quantity\":1},{\"item_id\":\"SKU_41521\",\"item_name\":\"Xiaomi Redmi 12C 4\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":15,\"discount\":485100,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2102200,\"quantity\":1},{\"item_id\":\"SKU_28140\",\"item_name\":\"Samsung Galaxy S22+ 8\\/128GB Pink Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":16,\"discount\":2923500,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":12668500,\"quantity\":1},{\"item_id\":\"SKU_34368\",\"item_name\":\"iPhone 14 128GB Blue smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":17,\"discount\":2974300,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":12888600,\"quantity\":1},{\"item_id\":\"SKU_35439\",\"item_name\":\"Google Pixel 7 Pro 12\\/256 GB Sloudy White Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":18,\"discount\":1995500,\"item_brand\":\"Google\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":14694400,\"quantity\":1},{\"item_id\":\"SKU_34200\",\"item_name\":\"HUAWEI Nova Y70 4\\/64GB Midnight black Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":19,\"discount\":615400,\"item_brand\":\"Huawei\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2666700,\"quantity\":1},{\"item_id\":\"SKU_23266\",\"item_name\":\"iPhone 13 Pro 128GB Sierra Blue smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":20,\"discount\":4156000,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":18009200,\"quantity\":1},{\"item_id\":\"SKU_23269\",\"item_name\":\"iPhone 13 Pro max 128GB Sierra Blue smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":21,\"discount\":4581300,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":19852400,\"quantity\":1},{\"item_id\":\"SKU_42949\",\"item_name\":\"Xiaomi Redmi Note 12 6\\/128GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":22,\"discount\":673100,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2916700,\"quantity\":1},{\"item_id\":\"SKU_29102\",\"item_name\":\"Xiaomi Redmi Note 11S 6\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":23,\"discount\":711500,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":3083300,\"quantity\":1},{\"item_id\":\"SKU_27094\",\"item_name\":\"Vivo Y21 4\\/64GB Diamond Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":24,\"discount\":40200,\"item_brand\":\"Vivo\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2330000,\"quantity\":1}]}");
+            let dataLayer = JSON.parse("{\"event\":\"view_item_list\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_29145\",\"item_name\":\"Xiaomi Redmi Note 11 Pro 8\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":1,\"discount\":971900,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":4211400,\"quantity\":1},{\"item_id\":\"SKU_40189\",\"item_name\":\"Samsung Galaxy S23 Ultra 12\\/256GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":2,\"discount\":3460700,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":14996200,\"quantity\":1},{\"item_id\":\"SKU_42668\",\"item_name\":\"Samsung Galaxy A14 4\\/128GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":3,\"discount\":634600,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2750000,\"quantity\":1},{\"item_id\":\"SKU_43220\",\"item_name\":\"Xiaomi Redmi Note 12 Pro 8\\/256GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":4,\"discount\":952800,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":4128800,\"quantity\":1},{\"item_id\":\"SKU_42682\",\"item_name\":\"Samsung Galaxy A14 4\\/64GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":5,\"discount\":576900,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2500000,\"quantity\":1},{\"item_id\":\"SKU_41436\",\"item_name\":\"Xiaomi Redmi Note 12 4\\/128GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":6,\"discount\":638500,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2766700,\"quantity\":1},{\"item_id\":\"SKU_34468\",\"item_name\":\"iPhone 14 Pro Max 128GB Deep Purple smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":7,\"discount\":4265000,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":18481800,\"quantity\":1},{\"item_id\":\"SKU_27906\",\"item_name\":\"Samsung Galaxy S22 8\\/256GB Qora smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":8,\"discount\":2114700,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":9163600,\"quantity\":1},{\"item_id\":\"SKU_34339\",\"item_name\":\"iPhone 14 Pro 128GB Deep Purple smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":9,\"discount\":3872200,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":16779500,\"quantity\":1},{\"item_id\":\"SKU_34343\",\"item_name\":\"iPhone 14 Pro 128GB Space Black smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":10,\"discount\":3872200,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":16779500,\"quantity\":1},{\"item_id\":\"SKU_28327\",\"item_name\":\"Samsung Galaxy S22 8\\/128GB Pink smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":11,\"discount\":2411100,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":10448000,\"quantity\":1},{\"item_id\":\"SKU_42934\",\"item_name\":\"Samsung Galaxy A54 8\\/128GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":12,\"discount\":1181500,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":5119700,\"quantity\":1},{\"item_id\":\"SKU_28139\",\"item_name\":\"Samsung Galaxy S22+ 8\\/128GBB Black smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":13,\"discount\":2923500,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":12668500,\"quantity\":1},{\"item_id\":\"SKU_28328\",\"item_name\":\"Samsung Galaxy S22 8\\/128GB White Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":14,\"discount\":2360100,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":10227200,\"quantity\":1},{\"item_id\":\"SKU_41521\",\"item_name\":\"Xiaomi Redmi 12C 4\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":15,\"discount\":485100,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2102200,\"quantity\":1},{\"item_id\":\"SKU_28140\",\"item_name\":\"Samsung Galaxy S22+ 8\\/128GB Pink Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":16,\"discount\":2923500,\"item_brand\":\"Samsung\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":12668500,\"quantity\":1},{\"item_id\":\"SKU_34368\",\"item_name\":\"iPhone 14 128GB Blue smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":17,\"discount\":2974300,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":12888600,\"quantity\":1},{\"item_id\":\"SKU_35439\",\"item_name\":\"Google Pixel 7 Pro 12\\/256 GB Sloudy White Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":18,\"discount\":1995500,\"item_brand\":\"Google\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":14694400,\"quantity\":1},{\"item_id\":\"SKU_34200\",\"item_name\":\"HUAWEI Nova Y70 4\\/64GB Midnight black Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":19,\"discount\":615400,\"item_brand\":\"Huawei\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2666700,\"quantity\":1},{\"item_id\":\"SKU_23266\",\"item_name\":\"iPhone 13 Pro 128GB Sierra Blue smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":20,\"discount\":4156000,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":18009200,\"quantity\":1},{\"item_id\":\"SKU_23269\",\"item_name\":\"iPhone 13 Pro max 128GB Sierra Blue smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":21,\"discount\":4581300,\"item_brand\":\"Apple\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":19852400,\"quantity\":1},{\"item_id\":\"SKU_42949\",\"item_name\":\"Xiaomi Redmi Note 12 6\\/128GB Qora Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":22,\"discount\":673100,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2916700,\"quantity\":1},{\"item_id\":\"SKU_29102\",\"item_name\":\"Xiaomi Redmi Note 11S 6\\/128GB Kulrang Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":23,\"discount\":711500,\"item_brand\":\"Xiaomi\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":3083300,\"quantity\":1},{\"item_id\":\"SKU_27094\",\"item_name\":\"Vivo Y21 4\\/64GB Diamond Smartfoni\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":24,\"discount\":40200,\"item_brand\":\"Vivo\",\"item_category\":\"\\u0421\\u043c\\u0430\\u0440\\u0442\\u0444\\u043e\\u043d\\u044b\",\"price\":2330000,\"quantity\":1}]}}");
+            window.dataLayer.push(dataLayer);
+            window.dataLayer.push(JSON.parse("{\"ecomm_prodid\":[29145,40189,42668,43220,42682,41436,34468,27906,34339,34343,28327,42934,28139,28328,41521,28140,34368,35439,34200,23266,23269,42949,29102,27094],\"ecomm_pagetype\":\"category\",\"ecomm_totalvalue\":[172838000]}"));
+            gtag("event", "view_item_list", data);
+        }
+
+
+    </script>
+
+
+{% endblock %}
