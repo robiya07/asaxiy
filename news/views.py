@@ -15,6 +15,21 @@ def delivery_points_view(request):
     return render(request, 'pages/delivery-points.html')
 
 
+def rules_view(request):
+    return render(request, 'pages/rules.html')
+
+
+def oferta_rassrochka_view(request):
+    return render(request, 'pages/oferta-rassrochka.html')
+
+
+def usloviya_rassrochki_view(request):
+    return render(request, 'pages/usloviya-rassrochki.html')
+
+
+def delivery_view(request):
+    return render(request, 'pages/delivery.html')
+
 def news_list_view(request):
     s = request.GET.get('search_key', '')
     news = NewsModel.objects.all()

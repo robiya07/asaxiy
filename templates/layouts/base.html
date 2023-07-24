@@ -115,7 +115,7 @@
                     <p>У нас выгодные цены и доставка до дома</p>
                 </div>
             </a>
-            <a href="https://asaxiy.uz/page/delivery" class="feature__item">
+            <a href="{% url "news:delivery" %}" class="feature__item">
                 <div class="feature__img">
                     <img class="img-fluid lazyload" data-src="{% static "custom-assets/images/icons/fast-delivery.svg" %}"
                          alt="delivery" loading="lazy">
@@ -125,7 +125,7 @@
                     <p>Наш сервис удивит вас</p>
                 </div>
             </a>
-            <a href="https://asaxiy.uz/page/rules" class="feature__item">
+            <a href="{% url "news:rules" %}" class="feature__item">
                 <div class="feature__img">
                     <img class="img-fluid lazyload" data-src="{% static "custom-assets/images/icons/return.svg" %}" alt="return"
                          loading="lazy" style="max-width: none;">
@@ -135,14 +135,14 @@
                     <p>Быстрое оформление и гарантия на возврат в случае неисправности</p>
                 </div>
             </a>
-            <a href="https://asaxiy.uz/page/usloviya-rassrochki" class="feature__item">
+            <a href="{% url "news:usloviya_rass" %}" class="feature__item">
                 <div class="feature__img">
                     <img class="img-fluid lazyload" data-src="{% static "custom-assets/images/icons/card.svg" %}" alt="card"
                          loading="lazy">
                 </div>
                 <div class="feature__text">
                     <div class="feature__title">Рассрочка</div>
-                    <p>Без предоплаты на 6 или 12 месяцев</p>
+                    <p>Без предоплаты 12 месяцев</p>
                 </div>
             </a>
         </div>
@@ -158,7 +158,7 @@
         <div class="chat_widget-header d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
                 <div class="bg-white chat_widget-logo d-flex align-items-center justify-content-center">
-                    <img class="img-fluid" src="custom-assets/images/logos/l-b.svg" alt="asaxiy logo">
+                    <img class="img-fluid" src="{% static "custom-assets/images/logos/l-b.svg" %}" alt="asaxiy logo">
                 </div>
                 Служба поддержки
             </div>
@@ -265,7 +265,7 @@
     </div>
 
     <button type="button" class="chat_widget-button d-flex align-items-center justify-content-center ml-auto btn p-0">
-        <img class="img-fluid" src="custom-assets/images/logos/l-w.svg" alt="asaxiy logo">
+        <img class="img-fluid" src="{% static "custom-assets/images/logos/l-w.svg" %}" alt="asaxiy logo">
     </button>
 </div>
 <div class="modal i__modal fade" id="installment" tabindex="-1"

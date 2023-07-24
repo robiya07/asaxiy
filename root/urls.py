@@ -27,4 +27,5 @@ urlpatterns = [
     path('', include('big_products.urls')),
     path('', include('shared.urls')),
     path('', include('news.urls')),
+    path('', include('users.urls')),
 ] + static(STATIC_URL, document_root=STATIC_ROOT) + static(MEDIA_URL, document_root=MEDIA_ROOT)

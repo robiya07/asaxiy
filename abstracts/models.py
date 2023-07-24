@@ -2,6 +2,7 @@ from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils.text import slugify
 
+
 class BaseDateTimeModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -37,7 +38,6 @@ class BaseSlugModel(models.Model):
 
 
 class BaseBookProductModel(BaseSlugModel, BaseDateTimeModel):
-
     model = models.CharField(max_length=50)
     name = models.CharField(max_length=100)
     main_image = models.ImageField(upload_to='images/product_detail')
