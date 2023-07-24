@@ -1,0 +1,86 @@
+{% extends "layouts/base.html" %}
+{% load brands %}
+
+{% block content %}
+
+    <div>
+        <div class="container mt-32">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble mb-0 pb-0">
+                    <li class="breadcrumb-item"><a href="https://asaxiy.uz/">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Страницы брендов</li>
+                </ol>
+            </nav>
+        </div>
+
+        <!--TOP BRANDS -->
+
+        <div class="mt-32 mb-32">
+            <div class="container">
+                <div class="alphbrands-header mb-32">
+                    <h5>Известные бренды</h5>
+                </div>
+                <div class="partners__list swiper-container">
+                    <div class="swiper-wrapper">
+                        {% for bra in brands_cap %}
+                            <div class="swiper-slide">
+                                <div class="feature__item partner__item">
+                                    <a href="{% url "shared:brand" bra.slug %}">
+                                        <img class="partner__img"
+                                             src="{{ bra.logo.url }}"
+                                             alt="{{ bra.name }}">
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <div class="alphbrands-header mb-32">
+                    <h5>
+                        Наши бренды <span>580</span>
+                    </h5>
+                </div>
+                <div class="alphbrands-content mb-40">
+                    <h6><a href="brands.html">Все бренды</a></h6>
+                    <ul class="alphbrands-letters">
+                        {% for let in brands_cap|unique_brands %}
+                            <li class="alphbrands-letter">
+                                <a href="{% url "shared:brands" %}?letter={{ let.name.0 }}"
+                                   class="">{{ let.name.0 }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="alphbrands-group mb-40">
+                    {% for brand in brands|unique_brands %}
+                        <div class="alphbrands-item">
+                            <div class="alphbrands-group-header">
+                                <h5>{{ brand.name.0 }}</h5>
+                            </div>
+                            <ul class="alphbrands-group-grid">
+                                {% for b in brands %}
+                                    {% if brand.name.0 == b.name.0 %}
+                                        <li>
+                                            <a href="{% url "shared:brand" b.slug %}">{{ b.name }}</a>
+                                        </li>
+                                    {% endif %}
+
+                                {% endfor %}
+
+
+                            </ul>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}

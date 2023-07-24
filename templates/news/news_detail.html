@@ -1,0 +1,128 @@
+{% extends "layouts/base.html" %}
+{% load hitcount_tags %}
+
+{% block content %}
+{% get_hit_count for news as d %}
+    <div class="blog-area">
+        <div class="container">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble"
+                    itemscope
+                    itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item"
+                        itemprop="itemListElement"
+                        itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://asaxiy.uz/">
+                <span itemprop="name">
+                Главная                </span>
+                            <meta itemprop="position" content="1">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item"
+                        itemprop="itemListElement"
+                        itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href='https://asaxiy.uz/news'>
+                            <span itemprop="name">Блог</span>
+                            <meta itemprop="position" content="2">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span>Какие морозильные камеры лучшие</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="single_post" itemscope itemtype="https://schema.org/NewsArticle">
+                        <link itemprop="mainEntityOfPage" href="kakie-morozilnye-kamery-luchshie.html"/>
+                        <link itemprop="image" href="https://assets.asaxiy.uz/news/product//64a6d87b13fff.jpg">
+                        <meta itemprop="headline" content="Какие морозильные камеры лучшие">
+                        <meta itemprop="description"
+                              content="В каждом холодильнике предусмотрен морозильник. Однако его объема не всегда достаточно, поэтому все чаще на кухнях стали появляться морозильные камеры — устройства для длительного хранения продуктов при низкой температуре.">
+                        <meta itemprop="datePublished" datetime="06-07-2023"
+                              content="06-07-2023">
+                        <meta itemprop="dateModified" datetime="06-07-2023"
+                              content="06-07-2023">
+                        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" class="d-none">
+                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                <img itemprop="url" src="../custom-assets/images/logos/asaxiy-logo.svg"/>
+                            </div>
+                            <meta itemprop="name" content="Asaxiy.uz">
+                        </div>
+
+                        <h1 class="blog_title">{{ news.name }}</h1>
+                        <div class="post-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>{{ news.created_at|date:"d-m-Y" }}</span>
+                            <i class="fas fa-eye"></i>
+                            <span>{{ d }}</span>
+                        </div>
+                        <div class="blog_img">
+                            <img src="{{ news.image.url }}"
+                                 alt="Какие морозильные камеры лучшие">
+                        </div>
+                        <div class="blog_content">
+                            <div class="blog_text" style="word-break: break-word;">
+                                {{ news.description|safe }}
+                            </div>
+                            <div class="blog__share">
+                                <p class="share__text mr-2">Поделиться:</p>
+                                <ul class="social__list">
+                                    <li><a class="sc_facebook"
+                                           href="https://www.facebook.com/dialog/share?app_id=296649824842615&u=https://asaxiy.uz/news/kakie-morozilnye-kamery-luchshie&display=page&href=https://asaxiy.uz/news/kakie-morozilnye-kamery-luchshie"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="sc_telegram"
+                                           href="https://t.me/share/url?url=https://asaxiy.uz/news/kakie-morozilnye-kamery-luchshie&text=Какие морозильные камеры лучшие"><i
+                                            class="fab fa-telegram-plane"></i></a></li>
+                                    <li><a class="sc_twitter"
+                                           href="https://twitter.com/intent/tweet?text=Какие морозильные камеры лучшие&url=https://asaxiy.uz/news/kakie-morozilnye-kamery-luchshie"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                    <li><a class="sc_whatsapp"
+                                           href="https://api.whatsapp.com/send?text=Какие морозильные камеры лучшие"
+                                           %20"https://asaxiy.uz/news/kakie-morozilnye-kamery-luchshie"><i
+                                            class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="feedback" class="col-md-12 mb-40 characteristic__content mt-3">
+                    <div class="characteristics feedback__wrapper" data-anchor-offset="15">
+                        <h6>Отзывы</h6>
+                        <div class="feedback">
+                            <div id="review" data-pjax-container="" data-pjax-push-state data-pjax-timeout="1000"></div>
+                        </div>
+                        <div class="links">
+                            <a id="add-comment" data-url="/news/add-comment/kakie-morozilnye-kamery-luchshie"
+                               class="d-inline button comment-ajax"
+                               type="button"
+                               data-target="#give-feedback">Оставить отзыв</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="comment-modal" class="fade modal" size="modal-lg" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id='comment-modal-form'></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

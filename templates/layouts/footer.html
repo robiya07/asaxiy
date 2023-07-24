@@ -8,16 +8,16 @@
                     <p class="footer__list-title">Информация</p>
                     <ul>
                         <li>
-                            <a href="https://asaxiy.uz/page/faq">Часто задаваемые вопросы</a>
+                            <a href="{% url "news:faq" %}">Часто задаваемые вопросы</a>
                         </li>
                         <li>
-                            <a href="https://asaxiy.uz/page/delivery-points">Пункты выдачи</a>
+                            <a href="{% url "news:delivery_points" %}">Пункты выдачи</a>
                         </li>
                         <li>
-                            <a href="https://asaxiy.uz/news">Блог</a>
+                            <a href="{% url "news:news" %}">Блог</a>
                         </li>
                         <li>
-                            <a href="https://asaxiy.uz/product/brands">Наши бренды</a>
+                            <a href="{% url "shared:brands" %}">Наши бренды</a>
                         </li>
                         <li>
                             <a href="https://asaxiy.uz/page/rules">Публичная оферта (Пользовательское соглашение)</a>

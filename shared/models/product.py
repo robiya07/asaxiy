@@ -15,6 +15,7 @@ class BrandModel(BaseSlugModel):
         verbose_name = 'Brand'
         verbose_name_plural = 'Brands'
         db_table = 'brands'
+        ordering = ('name',)
 
 
 class ProductModel(models.Model):

@@ -19,7 +19,7 @@ class UserModel(AbstractUser):
     balance = models.IntegerField(default=0, blank=True)
 
     def __str__(self):
-        return self.phone
+        return self.username
 
     class Meta:
         verbose_name = 'User'

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'eav',
     'django_mptt_admin',
+    'hitcount',
 
     'shared.apps.SharedConfig',
     'details.apps.DetailsConfig',
@@ -213,7 +214,7 @@ JAZZMIN_SETTINGS = {
         {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
 
         # external url that opens in a new window (Permissions can be added)
-        {"name": "View Site", "url": "http://127.0.0.1:8008/", "new_window": True},
+        {"name": "View Site", "url": "http://127.0.0.1:8000/", "new_window": True},
 
         # model admin to link to (Permissions checked against model)
         {"model": "auth.User"},

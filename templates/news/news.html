@@ -1,0 +1,168 @@
+{% extends "layouts/base.html" %}
+{% load static hitcount_tags %}
+
+{% block content %}
+
+    <main>
+        <div class="blog-area">
+            <div class="container">
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble"
+                        itemscope
+                        itemtype="https://schema.org/BreadcrumbList">
+                        <li class="breadcrumb-item"
+                            itemprop="itemListElement"
+                            itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="https://asaxiy.uz/">
+                <span itemprop="name">
+                Главная                </span>
+                                <meta itemprop="position" content="1">
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <span>Блог</span>
+                        </li>
+                    </ol>
+                </nav>
+
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="row grid">
+                            <div class="grid-sizer"></div>
+                            {% for n in news %}
+                                {% get_hit_count for n as d %}
+                                <div class="col-xl-4 col-md-6 grid-item">
+                                    <div class="blog_post">
+                                        <div class="blog_img">
+                                            <a href="{% url "news:news_detail" n.slug %}">
+                                                <img src="{{ n.image.url }}"
+                                                     alt="">
+                                            </a>
+                                        </div>
+                                        <div class="blog-content">
+                                            <div class="blog_text">
+                                                <h2 class="blog_title">
+                                                    <a href="{% url "news:news_detail" n.slug %}">{{ n.name }}</a>
+                                                </h2>
+                                                <div class="post-date">
+                                                    <i class="fas fa-calendar-alt"></i>
+                                                    <span>{{ n.created_at|date:"d-m-Y" }}</span>
+                                                    <i class="fas fa-eye"></i>
+                                                    <span>{{ d }}</span>
+                                                </div>
+                                                <p>{{ n.description|safe|truncatechars:"150" }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+
+                        </div>
+                        <nav class="pagination__nav">
+                            <ul class="pagination">
+                                <li class="page-item prev disabled"><a class="page-link">&laquo;</a></li>
+                                <li class="page-item active"><a class="page-link" href="news.html" data-page="0">1</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="https://asaxiy.uz/news?page=2"
+                                                         data-page="1">2</a></li>
+                                <li class="page-item"><a class="page-link" href="https://asaxiy.uz/news?page=3"
+                                                         data-page="2">3</a></li>
+                                <li class="page-item"><a class="page-link" href="https://asaxiy.uz/news?page=4"
+                                                         data-page="3">4</a></li>
+                                <li class="page-item"><a class="page-link" href="https://asaxiy.uz/news?page=5"
+                                                         data-page="4">5</a></li>
+                                <li class="page-item"><a class="page-link" href="https://asaxiy.uz/news?page=2"
+                                                         data-page="1">&raquo;</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3 mt-4 pt-2 mt-lg-0 pt-lg-0">
+                        <div class="blog_sidebar">
+                            <div class="widget">
+                                <div class="search_form">
+                                    <form action="{% url "news:news" %}">
+                                        <input name="search_key" value="{{ s }}" required=""
+                                               class="form-control" placeholder="Поиск..."
+                                               type="text">
+                                        <button type="submit" title="Поиск" class="btn icon_search">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h1 class="widget_title">Популярные новости</h1>
+                                <ul class="widget_recent_post">
+                                    <li>
+                                        <div class="post_footer">
+                                            <div class="post_img">
+                                                <a href="https://asaxiy.uz/news/molodezh-budushchee-nashei-strany"><img
+                                                        src="https://assets.asaxiy.uz/news/product//6287848d9e3ba.jpg"
+                                                        alt="Молодёжь - будущее нашей страны."></a>
+                                            </div>
+                                            <div class="post_content">
+                                                <h6><a href="https://asaxiy.uz/news/molodezh-budushchee-nashei-strany">Молодёжь
+                                                    - будущее нашей страны.</a></h6>
+                                                <div class="post-date m-0">
+                                                    <i class="fas fa-calendar-alt"></i>
+                                                    <span>20-05-2022</span>
+                                                    <i class="fas fa-eye"></i>
+                                                    <span>14967</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="post_footer">
+                                            <div class="post_img">
+                                                <a href="https://asaxiy.uz/news/oppo-x-2021"><img
+                                                        src="https://assets.asaxiy.uz/news/product//5fb76504ce51a.jpg"
+                                                        alt="Представлен Oppo X 2021 — смартфон с растягивающимся экраном"></a>
+                                            </div>
+                                            <div class="post_content">
+                                                <h6><a href="https://asaxiy.uz/news/oppo-x-2021">Представлен Oppo X 2021
+                                                    — смартфон с растягивающимся экраном</a></h6>
+                                                <div class="post-date m-0">
+                                                    <i class="fas fa-calendar-alt"></i>
+                                                    <span>22-07-2023</span>
+                                                    <i class="fas fa-eye"></i>
+                                                    <span>10576</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="post_footer">
+                                            <div class="post_img">
+                                                <a href="https://asaxiy.uz/news/xiaomi-mi-band-5"><img
+                                                        src="https://assets.asaxiy.uz/news/product//5f22af88a918e.jpg"
+                                                        alt="Xiaomi Mi Band 5 Смарт браслетидаги ўзгариш ва янгиликлар билан танишамиз."></a>
+                                            </div>
+                                            <div class="post_content">
+                                                <h6><a href="https://asaxiy.uz/news/xiaomi-mi-band-5">Xiaomi Mi Band 5
+                                                    Смарт браслетидаги ўзгариш ва янгиликлар билан танишамиз.</a></h6>
+                                                <div class="post-date m-0">
+                                                    <i class="fas fa-calendar-alt"></i>
+                                                    <span>30-07-2020</span>
+                                                    <i class="fas fa-eye"></i>
+                                                    <span>8059</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="widget">
+                                <!--                         first__aside week__product -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+{% endblock %}

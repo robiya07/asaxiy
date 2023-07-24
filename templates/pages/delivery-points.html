@@ -1,0 +1,300 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<main>
+    <section class="mb-40">
+        <div class="container">
+            <div class="d-flex justify-content-between mb-4">
+                <h1 class="favourite__main-title mb-0">Пункты выдачи</h1>
+                <select class="nc__select delivery__filter">
+                    <option value="all">Все регионы</option>
+                    <option value="1">Город Ташкент</option>
+                    <option value="2">Андижанская область</option>
+                    <option value="3">Бухарская область</option>
+                    <option value="4">Джизакская область</option>
+                    <option value="5">Кашкадарьинская область</option>
+                    <option value="6">Навоийская область</option>
+                    <option value="7">Наманганская область</option>
+                    <option value="8">Самаркандская область</option>
+                    <option value="9">Сурхандарьинская область</option>
+                    <option value="10">Сырдарьинская область</option>
+                    <option value="11">Ташкентская область</option>
+                    <option value="12">Ферганская область</option>
+                    <option value="13">Хорезмская область</option>
+                    <option value="14">Республика Каракалпакстан</option>
+                </select>
+            </div>
+            <div class="row delivery">
+                <div class="col-lg-4">
+                    <div class="delivery__content mb-4 mb-lg-0 overflow-hidden">
+                        <div class="px-3 pt-3">
+                            <input type="text" class="form-control delivery__input"
+                                   placeholder=Поиск>
+                        </div>
+                        <ul class="delivery__points">
+
+                            <li class="delivery__point d-flex align-items-start"
+                                data-lat="41.314771764582"
+                                data-lang="69.288937697204"
+                                data-region="1">
+                                <img class="delivery__point-img" src="../custom-assets/images/icons/asaxiy-mark.svg"/>
+                                <div>
+                                    <div class="delivery__point-name mb-2">
+                                        Asaxiy Books Kitob Olami
+                                    </div>
+                                    <div class="delivery__point-address mb-2">Asaxiy Books Kitob Olami, Yunusobod,
+                                        Mustaqillik ko`chasi
+                                    </div>
+                                    <div class="delivery__point-description mb-2"><p>10:00-21:00,&nbsp;без выходных</p>
+                                    </div>
+                                    <div class="delivery__point-description ">Tel: +998712000105</div>
+                                </div>
+                            </li>
+                            <li class="delivery__point d-flex align-items-start"
+                                data-lat="41.320160840181"
+                                data-lang="69.262189865112"
+                                data-region="1">
+                                <img class="delivery__point-img" src="../custom-assets/images/icons/asaxiy-mark.svg"/>
+                                <div>
+                                    <div class="delivery__point-name mb-2">
+                                        Asaxiy Books Panorama
+                                    </div>
+                                    <div class="delivery__point-address mb-2">Asaxiy Books Panorama, Navoiy shoh
+                                        ko'chasi 11, Kitob olami
+                                    </div>
+                                    <div class="delivery__point-description mb-2"><p>10:00-21:00,&nbsp;без выходных</p>
+                                    </div>
+                                    <div class="delivery__point-description ">Tel: +998712000105</div>
+                                </div>
+                            </li>
+                            <li class="delivery__point d-flex align-items-start"
+                                data-lat="41.28699689125"
+                                data-lang="69.187135459698"
+                                data-region="1">
+                                <img class="delivery__point-img" src="../custom-assets/images/icons/asaxiy-mark.svg"/>
+                                <div>
+                                    <div class="delivery__point-name mb-2">
+                                        Asaxiy Farhod bozori
+                                    </div>
+                                    <div class="delivery__point-address mb-2">Farhod bozori chorrahasi, Lutfi ko'chasi,
+                                        Tashkent 100138, Узбекистан
+                                    </div>
+                                    <div class="delivery__point-description mb-2"><p>10:00-21:00, без выходных</p>
+                                    </div>
+                                    <div class="delivery__point-description ">Tel: +998900650645</div>
+                                </div>
+                            </li>
+                            <li class="delivery__point d-flex align-items-start"
+                                data-lat="41.341405"
+                                data-lang="69.264554"
+                                data-region="1">
+                                <img class="delivery__point-img" src="../custom-assets/images/icons/asaxiy-mark.svg"/>
+                                <div>
+                                    <div class="delivery__point-name mb-2">
+                                        Asaxiy Малика
+                                    </div>
+                                    <div class="delivery__point-address mb-2">Adham Rahmat 10, Tashkent, Узбекистан
+                                    </div>
+                                    <div class="delivery__point-description mb-2"><p>09:00-22:00, без выходных</p>
+                                    </div>
+                                    <div class="delivery__point-description ">Tel: +998712000105</div>
+                                </div>
+                            </li>
+                            <li class="delivery__point d-flex align-items-start"
+                                data-lat="41.293218"
+                                data-lang="69.221936"
+                                data-region="1">
+                                <img class="delivery__point-img" src="../custom-assets/images/icons/asaxiy-mark.svg"/>
+                                <div>
+                                    <div class="delivery__point-name mb-2">
+                                        Asaxiy Новза
+                                    </div>
+                                    <div class="delivery__point-address mb-2">142/1 Muqimiy ko'chasi, Tashkent,
+                                        Узбекистан
+                                    </div>
+                                    <div class="delivery__point-description mb-2"><p>10:00-21:00, без выходных</p>
+                                    </div>
+                                    <div class="delivery__point-description ">Tel: +998900350645</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div id="map" class="delivery__map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const getPoints = async () => {
+            try {
+                const points = [{
+                    "id": 83,
+                    "region_id": 1,
+                    "city_id": 209,
+                    "company": "Asaxiy",
+                    "name": "Asaxiy Books Kitob Olami",
+                    "address": "Asaxiy Books Kitob Olami, Yunusobod, Mustaqillik ko`chasi",
+                    "landmark": "",
+                    "phone": "+998712000105",
+                    "locationUrl": "https:\/\/goo.gl\/maps\/EaRb5CA4LK4JFRXy8",
+                    "coords": [41.314771764582, 69.288937697204],
+                    "description": "<p>10:00-21:00,&nbsp;\u0431\u0435\u0437 \u0432\u044b\u0445\u043e\u0434\u043d\u044b\u0445<\/p>\r\n"
+                }, {
+                    "id": 74,
+                    "region_id": 1,
+                    "city_id": 208,
+                    "company": "Asaxiy",
+                    "name": "Asaxiy Books Panorama",
+                    "address": "Asaxiy Books Panorama, Navoiy shoh ko'chasi 11, Kitob olami",
+                    "landmark": " Navoiy shoh ko'chasi 11, Kitob olami yonida",
+                    "phone": "+998712000105",
+                    "locationUrl": "https:\/\/goo.gl\/maps\/AimmZtjPPUKroUDU8",
+                    "coords": [41.320160840181, 69.262189865112],
+                    "description": "<p>10:00-21:00,&nbsp;\u0431\u0435\u0437 \u0432\u044b\u0445\u043e\u0434\u043d\u044b\u0445<\/p>\r\n"
+                }, {
+                    "id": 3,
+                    "region_id": 1,
+                    "city_id": 207,
+                    "company": "Asaxiy",
+                    "name": "Asaxiy Farhod bozori",
+                    "address": "Farhod bozori chorrahasi, Lutfi ko'chasi, Tashkent 100138, \u0423\u0437\u0431\u0435\u043a\u0438\u0441\u0442\u0430\u043d",
+                    "landmark": "Farhod bozori",
+                    "phone": "+998900650645",
+                    "locationUrl": "https:\/\/goo.gl\/maps\/stcHQLDNxNoDQdhA6",
+                    "coords": [41.28699689125, 69.187135459698],
+                    "description": "<p>10:00-21:00, \u0431\u0435\u0437 \u0432\u044b\u0445\u043e\u0434\u043d\u044b\u0445<\/p>\r\n"
+                }, {
+                    "id": 1,
+                    "region_id": 1,
+                    "city_id": 209,
+                    "company": "Asaxiy",
+                    "name": "Asaxiy \u041c\u0430\u043b\u0438\u043a\u0430",
+                    "address": "Adham Rahmat 10, Tashkent, \u0423\u0437\u0431\u0435\u043a\u0438\u0441\u0442\u0430\u043d",
+                    "landmark": "Malika bozori",
+                    "phone": "+998712000105",
+                    "locationUrl": "https:\/\/goo.gl\/maps\/py5DBSDsZxNH8JSH9",
+                    "coords": [41.341405, 69.264554],
+                    "description": "<p>09:00-22:00, \u0431\u0435\u0437 \u0432\u044b\u0445\u043e\u0434\u043d\u044b\u0445<\/p>\r\n"
+                }, {
+                    "id": 2,
+                    "region_id": 1,
+                    "city_id": 207,
+                    "company": "Asaxiy",
+                    "name": "Asaxiy \u041d\u043e\u0432\u0437\u0430",
+                    "address": "142\/1 Muqimiy ko'chasi, Tashkent, \u0423\u0437\u0431\u0435\u043a\u0438\u0441\u0442\u0430\u043d",
+                    "landmark": "Novza metro, Oltin markaz orqa tarafi",
+                    "phone": "+998900350645",
+                    "locationUrl": "https:\/\/goo.gl\/maps\/74gnAL6kdU6oJShU8",
+                    "coords": [41.293218, 69.221936],
+                    "description": "<p>10:00-21:00, \u0431\u0435\u0437 \u0432\u044b\u0445\u043e\u0434\u043d\u044b\u0445<\/p>\r\n"
+                }];
+                init(points)
+            } catch (error) {
+                console.error("Error fetching points:", error);
+            }
+        }
+
+        ymaps.ready(getPoints);
+
+        function init(points) {
+            var myMap = new ymaps.Map("map", {
+                center: [41.311151, 69.279737],
+                zoom: 10
+            }, {
+                searchControlProvider: 'yandex#search'
+            })
+
+            var myCollection = new ymaps.GeoObjectCollection();
+            var icon = ''
+
+            for (var i = 0; i < points.length; i++) {
+                if (points[i].company === 'Asaxiy') {
+                    icon = '/custom-assets/images/icons/asaxiy-mark.svg'
+                } else {
+                    icon = '/custom-assets/images/icons/bts-mark.svg'
+                }
+
+                myCollection.add(new ymaps.Placemark(points[i].coords,
+                    {
+                        balloonContentBody:
+                            `<address>
+                            <strong>${points[i].name}</strong>
+                        </address>
+                        <div>Адрес: <a href="https://asaxiy.uz/page/${points[i].locationUrl}" target="_blank">${points[i].address}</a></div>
+                        <div><a href="tel:${points[i].phone}">Tel: ${points[i].phone}</a></div>
+                        <div>${points[i].description}</div>`
+                    },
+                    {
+                        iconLayout: 'default#imageWithContent',
+                        iconImageHref: icon,
+                        iconImageSize: [50, 50],
+                        iconImageOffset: [-15, -42],
+                        iconContentOffset: [15, 15],
+                        iconShape: {
+                            type: 'Rectangle',
+                            coordinates: [[-15, -42], [15, 0]]
+                        }
+                    }
+                ));
+            }
+
+            myMap.geoObjects.add(myCollection);
+
+            const searchInput = document.querySelector('.delivery__input');
+            const deliveryPoints = document.querySelectorAll('.delivery__point');
+
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.toLowerCase();
+
+                deliveryPoints.forEach(point => {
+                    const name = point.querySelector('.delivery__point-name').textContent.toLowerCase();
+
+                    if (name.includes(query)) {
+                        point.removeAttribute("style");
+                    } else {
+                        point.style.cssText = 'display: none !important';
+                    }
+                });
+            });
+
+            $('.delivery__filter').on('change', function () {
+                var selectedRegion = $(this).val();
+
+                deliveryPoints.forEach(point => {
+                    const region = point.dataset.region;
+
+                    if (selectedRegion === 'all' || selectedRegion === region) {
+                        point.removeAttribute("style");
+                    } else {
+                        point.style.cssText = 'display: none !important';
+                    }
+                });
+            });
+
+            deliveryPoints.forEach(point => {
+                if (point.matches('.delivery__point')) {
+                    point.addEventListener('click', () => {
+                        var lat = Number(point.dataset.lat);
+                        var lang = Number(point.dataset.lang);
+
+                        myMap.setCenter([lat, lang], 16, {
+                            duration: 500,
+                            checkZoomRange: true
+                        });
+
+                        var map = $('#map').get(0);
+
+                        map.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                }
+            });
+        }
+
+
+    </script>
+</main>
+{% endblock %}
